@@ -27,4 +27,5 @@ a {
   // testing that mixnis, variables, and typography are working
   color: $primary;
   font-family: $primaryFont;
+  @include fontSize(30);
 }

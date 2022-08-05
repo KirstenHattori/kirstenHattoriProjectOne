@@ -243,12 +243,13 @@ a {
   transition: 0.3s;
   color: #FFF;
   font-family: "Tulpen One", cursive;
+  font-size: 30px;
+  font-size: 1.5rem;
 }
 
 .skipLink {
   background-color: white;
   color: black;
-  font-size: 1rem;
   padding: 10px 0;
   position: absolute;
   left: -1000px;
