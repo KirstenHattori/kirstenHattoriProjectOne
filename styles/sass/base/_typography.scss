@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Tulpen', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Chathura', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&display=swap');
+  font-weight: normal, bold;
+}
+
+
+
+// ~~~
+
+html {
+  font-size: 125%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: 0.3s;
+
+  // testing that mixnis, variables, and typography are working
+  color: $primary;
+  font-family: $primaryFont;
+}

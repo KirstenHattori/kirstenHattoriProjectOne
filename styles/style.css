@@ -220,3 +220,60 @@ template {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@font-face {
+  font-family: "Tulpen", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Chathura", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&display=swap");
+  font-weight: normal, bold;
+}
+html {
+  font-size: 125%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #FFF;
+  font-family: "Tulpen One", cursive;
+}
+
+.skipLink {
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  padding: 10px 0;
+  position: absolute;
+  left: -1000px;
+  top: 0;
+  z-index: 999;
+}
+.skipLink:focus {
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover, a:focus {
+  background-color: #FF8327;
+  color: #BF2603;
+}

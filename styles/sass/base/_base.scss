@@ -1,0 +1,40 @@
+// skipLink Styles
+.skipLink {
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  padding: 10px 0;
+  position: absolute;
+  left: -1000px;
+  top: 0;
+  z-index: 999;
+
+  // because using sass, can nest it
+  &:focus {
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
+
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  &:hover,
+  &:focus {
+    // checking this accessibility function is working
+    background-color: $tertiary;
+    color: $secondary; //.accessibility
+  }
+}
