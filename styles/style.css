@@ -228,7 +228,6 @@ html {
   font-family: "Chathura", sans-serif;
   font-weight: normal;
   color: #FFF;
-  background-color: #111010;
 }
 
 h1 {
@@ -337,6 +336,10 @@ a.button {
   text-align: center;
 }
 
+html {
+  background-color: rgba(17, 16, 16, 0.9);
+}
+
 .wrapper {
   max-width: 1280px;
   width: 85%;
@@ -349,14 +352,47 @@ ul {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
+a:hover, a:focus {
+  color: #BF2603;
+}
 a.navigation:hover, a.navigation:focus {
   color: #BF2603;
 }
+
+button,
 a.button {
   background-color: #BF2603;
   padding: 5px 45px;
 }
-a.button:hover, a.button:focus {
+button:hover, button:focus,
+a.button:hover,
+a.button:focus {
   background-color: #FFF;
   color: #BF2603;
+}
+
+nav {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery {
+  background-color: #220303;
+  border: 1px solid greenyellow;
+}
+
+footer {
+  text-align: center;
+}
+footer p {
+  margin: 3px 0;
+}
+footer a {
+  font-family: inherit;
 }
