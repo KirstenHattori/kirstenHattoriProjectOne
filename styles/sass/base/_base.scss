@@ -17,10 +17,10 @@
   }
 }
 
-
+// BASE STYLES
 .wrapper {
   max-width: 1280px;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -31,10 +31,15 @@ ul {
 }
 
 a {
-  &:hover,
-  &:focus {
-    // checking this accessibility function is working
-    background-color: $tertiary;
-    color: $secondary; //.accessibility
+  &.button {
+    background-color: $secondary;
+    padding: 5px 45px;
+
+    &:hover,
+    &:focus {
+      // checking this accessibility function is working
+      background-color: $primary;
+      color: $secondary; //.accessibility
+    }
   }
 }

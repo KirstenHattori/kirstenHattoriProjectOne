@@ -75,8 +75,9 @@ a {
 }
 
 button,
-a.buttons {
+a.button {
   font-family: $primaryFont;
   color: inherit;
-  @include headingsDefault(42, 48, 1.8);
+  @include headingsDefault(38, 48, 1.8);
+  text-transform: capitalize;
 }
