@@ -23,9 +23,9 @@ html {
 h1 {
   font-family: $primaryFont;
   color: $tertiary;
-  @include fontSize(261.4);
+  @include headingsDefault(261.4, 261.4, 2.4);
   // letter-spacing: 2.4px;
-  text-align: center;
+  // text-align: center;
   margin: 0;
 }
 

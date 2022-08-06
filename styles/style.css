@@ -234,8 +234,11 @@ h1 {
   font-family: "Tulpen One", cursive;
   color: #FF8327;
   font-size: 261.4px;
-  font-size: 26.14rem;
-  text-align: center;
+  font-size: 13.07rem;
+  line-height: 261.4px;
+  line-height: 13.07rem;
+  letter-spacing: 2.4px;
+  letter-spacing: 0.12rem;
   margin: 0;
 }
 
@@ -339,7 +342,7 @@ a.button {
 }
 
 html {
-  background-color: rgba(17, 16, 16, 0.9);
+  background-color: #111010;
 }
 
 body {
@@ -386,7 +389,7 @@ a.button:focus {
 .navBar {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 15;
   background-color: transparent;
   width: 60%;
   left: 20%;
@@ -405,9 +408,47 @@ a.button:focus {
 }
 
 header {
+  margin-bottom: 20vh;
   background-image: url(../assets/home-image-1.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  height: 85vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .headerTxtContainer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+header .headerTxtContainer h1 h1,
+header .headerTxtContainer h2 {
+  z-index: 10;
+}
+header .headerTxtContainer h2 {
+  line-height: 84px;
+}
+header .headerImgContainer {
+  margin: 0;
+}
+header .headerImgContainer img {
+  width: 50%;
+  position: absolute;
+  z-index: 5;
+  top: 270px;
+  right: 0;
+  bottom: 5;
 }
 
 .gallery {
