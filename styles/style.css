@@ -375,11 +375,24 @@ a.button:focus {
   color: #BF2603;
 }
 
-nav {
+.navBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background-color: transparent;
+}
+.navBar ul {
+  margin: 0 auto;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .gallery {

@@ -1,4 +1,14 @@
-nav {
-    background-color: transparent;
+.navBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: transparent;
+    
+    ul{
+    margin: 0 auto;
+    width: 50%;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
+}
