@@ -22,10 +22,10 @@ html {
   background-color: rgba($color: $quaternary, $alpha: 0.9);
 }
 
-.wrapper {
-  max-width: 1280px;
-  width: 85%;
-  margin: 0 auto;
+body {
+  color: $primary;
+  font-family: $secondaryFont;
+  font-size: $baseFontSize;
 }
 
 ul {
@@ -62,4 +62,10 @@ a.button {
     background-color: $primary;
     color: $secondary; //.accessibility
   }
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 85%;
+  margin: 0 auto;
 }

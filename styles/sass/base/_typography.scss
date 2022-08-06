@@ -26,6 +26,7 @@ h1 {
   @include fontSize(261.4);
   // letter-spacing: 2.4px;
   text-align: center;
+  margin: 0;
 }
 
 h2,
@@ -33,6 +34,7 @@ h3,
 h4 {
   font-family: $secondaryFont;
   font-weight: bold;
+  margin: 0;
 }
 
 h2 {
