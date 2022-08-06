@@ -303,6 +303,11 @@ a.navigation {
   letter-spacing: 1.9px;
   letter-spacing: 0.095rem;
 }
+a.logo {
+  font-family: "Tulpen One", cursive;
+  font-size: 38px;
+  font-size: 3.8rem;
+}
 
 button,
 a.buttons {

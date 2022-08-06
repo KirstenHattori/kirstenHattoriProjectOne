@@ -61,11 +61,16 @@ a {
   color: $primary;
   font-family: $primaryFont;
   
-  &.navigation{
+  &.navigation {
     font-family: $secondaryFont;
     font-weight: bold;
     text-transform: uppercase;
     @include headingsDefault(38, 29, 1.9);
+  }
+
+  &.logo {
+    font-family: $primaryFont;
+    @include fontSize(38)
   }
 }
 
