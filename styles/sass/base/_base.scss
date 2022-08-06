@@ -31,6 +31,13 @@ ul {
 }
 
 a {
+ &.navigation {
+  &:hover,
+  &:focus {
+    color: $secondary;
+  }
+ }
+
   &.button {
     background-color: $secondary;
     padding: 5px 45px;
