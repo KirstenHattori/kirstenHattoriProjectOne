@@ -1,23 +1,56 @@
-@font-face {
-  font-family: 'Tulpen', cursive;
-  src: url('https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap');
-  font-weight: normal;
-}
+// @font-face {
+//   font-family: 'Tulpen', cursive;
+//   src: url('https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap');
+//   font-weight: normal;
+// }
 
-@font-face {
-  font-family: 'Chathura', sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&display=swap');
-  font-weight: normal, bold;
-}
-
+// @font-face {
+//   font-family: 'Chathura', sans-serif;
+//   src: url('https://fonts.googleapis.com/css2?family=Chathura&display=swap');
+//   font-weight: normal;
+// }
 
 
 // ~~~
 
 html {
   font-size: 125%;
+  font-family: $secondaryFont;
+  font-weight: normal;
+  color: $primary;
+  background-color: $quaternary;
 }
 
+h1 {
+  font-family: $primaryFont;
+  color: $tertiary;
+  @include fontSize(261.4);
+  // letter-spacing: 2.4px;
+  text-align: center;
+}
+
+h2,
+h3,
+h4 {
+  font-family: $secondaryFont;
+  font-weight: bold;
+}
+
+h2 {
+  @include headingsDefault(83.2, 94.7, 2.6);
+}
+
+h3 {
+  @include headingsDefault(68, 58, 2.2);
+}
+
+h4 {
+  @include headingsDefault(58, 48, 1.8);
+}
+p {
+  font-family: $secondaryFont;
+  @include headingsDefault(39, 30, 1.9);
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -27,5 +60,18 @@ a {
   // testing that mixnis, variables, and typography are working
   color: $primary;
   font-family: $primaryFont;
-  @include fontSize(30);
+  
+  &.navigation{
+    font-family: $secondaryFont;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include headingsDefault(38, 29, 1.9);
+  }
+}
+
+button,
+a.buttons {
+  font-family: $primaryFont;
+  color: inherit;
+  @include headingsDefault(42, 48, 1.8);
 }

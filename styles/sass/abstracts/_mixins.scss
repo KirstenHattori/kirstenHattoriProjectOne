@@ -1,4 +1,14 @@
 @mixin fontSize($sizeValue) {
   font-size: $sizeValue * 1px;
+  font-size: ($sizeValue/10) * 1rem;
+}
+
+
+@mixin headingsDefault($sizeValue, $lineValue, $spacingValue) {
+  font-size: $sizeValue * 1px;
   font-size: ($sizeValue/20) * 1rem;
+  line-height: $lineValue * 1px;
+  line-height: ($lineValue/20) * 1rem;
+  letter-spacing: $spacingValue * 1px;
+  letter-spacing: ($spacingValue/20) * 1rem;
 }
