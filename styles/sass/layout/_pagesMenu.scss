@@ -1,0 +1,30 @@
+.pagesMenu {
+  padding: 50px 0 100px;
+  
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .menuItem {
+      width: 48%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+
+
+  .iconContainer {
+    max-width: 50px;
+    min-width: 50px;
+    max-height: 50px;min-height: 50px;
+    margin-right: 15px;
+    padding: 10px;
+    background-color: $secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}
