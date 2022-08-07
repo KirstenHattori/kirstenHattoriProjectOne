@@ -412,7 +412,7 @@ header {
   background-image: url(../assets/home-image-1.jpg);
   background-position: center;
   background-size: contain;
-  height: 85vh;
+  min-height: 85vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -491,6 +491,17 @@ header .headerImgContainer img {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 50%;
+}
+
+.readMore {
+  background-color: #220303;
+}
+.readMore .imgContainer {
+  width: 50%;
+}
+.readMore .txtContainer {
+  width: 50%;
+  margin-right: 0;
 }
 
 .gallery {
