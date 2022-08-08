@@ -1,0 +1,25 @@
+.events {
+  padding: 120px 0 110px;
+
+  .flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .imgContainer {
+      width: 20%;
+    }
+
+    .txtContainer {
+      max-width: 70%;
+
+      h3 {
+        color: $tertiary;
+      }
+
+      p {
+        margin-top: 15px;
+      }
+    }
+  }
+}

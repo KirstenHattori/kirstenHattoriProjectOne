@@ -535,6 +535,33 @@ header h2 {
   padding: 0 100px;
 }
 
+.events {
+  padding: 120px 0 110px;
+}
+.events .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.events .flexContainer .imgContainer {
+  width: 20%;
+}
+.events .flexContainer .txtContainer {
+  max-width: 70%;
+}
+.events .flexContainer .txtContainer h3 {
+  color: #FF8327;
+}
+.events .flexContainer .txtContainer p {
+  margin-top: 15px;
+}
+
 .gallery {
   background-color: #220303;
 }
