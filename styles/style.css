@@ -524,6 +524,17 @@ header h2 {
           align-items: flex-end;
 }
 
+.party {
+  padding: 100px 0;
+  text-align: center;
+}
+.party h3 {
+  color: #FF8327;
+}
+.party p {
+  padding: 0 100px;
+}
+
 .gallery {
   background-color: #220303;
 }
