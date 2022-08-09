@@ -342,7 +342,7 @@ a.button {
 }
 
 html {
-  background-color: #111010;
+  background-color: rgba(17, 16, 16, 0.9);
 }
 
 body {
@@ -408,7 +408,7 @@ a.button:focus {
 }
 
 header {
-  margin-bottom: 20vh;
+  background-color: #111010;
   background-image: url(../assets/home-image-1.jpg);
   background-position: center;
   background-size: contain;
@@ -442,7 +442,8 @@ header h2 {
 }
 
 .pagesMenu {
-  padding: 50px 0 100px;
+  background-color: #111010;
+  padding: 150px 0 100px;
 }
 .pagesMenu ul {
   display: -webkit-box;
@@ -542,6 +543,7 @@ header h2 {
 }
 
 .party {
+  background-color: #111010;
   padding: 100px 0;
   text-align: center;
 }
@@ -553,6 +555,7 @@ header h2 {
 }
 
 .events {
+  background-color: #111010;
   padding: 120px 0 110px;
 }
 .events .flexContainer {

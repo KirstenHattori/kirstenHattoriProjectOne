@@ -19,7 +19,7 @@
 
 // BASE STYLES
 html {
-  background-color: $quaternary;
+  background-color: rgba($color: $quaternary, $alpha: 0.9);
   // rgba($color: $quaternary, $alpha: 1);
 }
 
