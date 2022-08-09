@@ -488,18 +488,21 @@ header h2 {
 
 .readMore {
   background-color: #220303;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px 0;
+}
+.readMore .flexContainer {
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 50px 0;
+  max-width: 100%;
 }
 .readMore .imgContainer {
-  width: 45%;
   margin: 0;
   padding: 0;
 }
@@ -510,9 +513,12 @@ header h2 {
 .readMore .imgContainer img.lastImg {
   -webkit-box-shadow: -25px 25px 1px #FF8327;
           box-shadow: -25px 25px 1px #FF8327;
+  position: relative;
+  right: 0;
 }
 .readMore .txtContainer {
   width: 35%;
+  min-width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
