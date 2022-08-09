@@ -503,6 +503,14 @@ header h2 {
   margin: 0;
   padding: 0;
 }
+.readMore .imgContainer img {
+  -webkit-box-shadow: 25px 25px 1px #FF8327;
+          box-shadow: 25px 25px 1px #FF8327;
+}
+.readMore .imgContainer img.lastImg {
+  -webkit-box-shadow: -25px 25px 1px #FF8327;
+          box-shadow: -25px 25px 1px #FF8327;
+}
 .readMore .txtContainer {
   width: 35%;
   display: -webkit-box;
@@ -554,6 +562,10 @@ header h2 {
 }
 .events .flexContainer .imgContainer {
   width: 20%;
+}
+.events .flexContainer .imgContainer img {
+  -webkit-box-shadow: -20px 20px 1px #FF8327;
+          box-shadow: -20px 20px 1px #FF8327;
 }
 .events .flexContainer .txtContainer {
   max-width: 70%;

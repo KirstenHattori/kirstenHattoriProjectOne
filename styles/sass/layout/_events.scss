@@ -8,6 +8,10 @@
 
     .imgContainer {
       width: 20%;
+
+      img {
+    box-shadow: -20px 20px 1px $tertiary;
+      }
     }
 
     .txtContainer {
