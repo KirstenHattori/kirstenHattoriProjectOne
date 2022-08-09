@@ -463,7 +463,7 @@ header h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.pagesMenu .iconContainer {
+.pagesMenu ul .menuItem .iconContainer {
   max-width: 50px;
   min-width: 50px;
   max-height: 50px;
@@ -481,6 +481,9 @@ header h2 {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 50%;
+}
+.pagesMenu ul .menuItem .txtContainer p {
+  margin-top: 15px;
 }
 
 .readMore {
