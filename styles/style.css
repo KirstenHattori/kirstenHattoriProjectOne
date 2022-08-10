@@ -395,7 +395,7 @@ a.button:focus {
 }
 .navBar ul {
   margin: 0 auto;
-  width: 60%;
+  width: 60vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,9 +436,10 @@ header h2 {
   line-height: 4.2rem;
 }
 header img {
+  width: 50vw;
   position: absolute;
   right: 0;
-  bottom: -30px;
+  bottom: -90px;
   z-index: 5;
 }
 
@@ -513,6 +514,7 @@ header img {
           box-shadow: 25px 25px 1px #FF8327;
   position: relative;
   top: -90px;
+  width: 45vw;
 }
 .readMore .imgContainer .lastImg {
   -webkit-box-shadow: -25px 25px 1px #FF8327;
@@ -563,6 +565,9 @@ header img {
 .imgBreak {
   background-color: rgba(17, 16, 16, 0.9);
 }
+.imgBreak img {
+  width: 100vw;
+}
 
 .events {
   background-color: #111010;
@@ -580,14 +585,14 @@ header img {
           align-items: center;
 }
 .events .flexContainer .imgContainer {
-  width: 20%;
+  width: 25%;
 }
 .events .flexContainer .imgContainer img {
   -webkit-box-shadow: -20px 20px 1px #FF8327;
           box-shadow: -20px 20px 1px #FF8327;
 }
 .events .flexContainer .txtContainer {
-  max-width: 70%;
+  max-width: 65%;
 }
 .events .flexContainer .txtContainer h3 {
   color: #FF8327;
@@ -616,7 +621,7 @@ footer {
   text-align: center;
 }
 footer p {
-  margin: 3px 0;
+  margin: 10px 0 0;
 }
 footer a {
   font-family: inherit;

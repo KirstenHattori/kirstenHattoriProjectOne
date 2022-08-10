@@ -15,11 +15,12 @@
     // width: 45%;
     margin: 0;
     padding: 0;
-
+    
     img {
-    box-shadow: 25px 25px 1px $tertiary;
-    position: relative;
-    top: -90px;
+      box-shadow: 25px 25px 1px $tertiary;
+      position: relative;
+      top: -90px;
+      width: 45vw;
     }
 
     .lastImg {
