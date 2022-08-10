@@ -3,6 +3,11 @@
   font-size: ($sizeValue/10) * 1rem;
 }
 
+@mixin lineHeight($lineValue) {
+  line-height: $lineValue * 1px;
+  line-height: ($lineValue/20) * 1rem;
+}
+
 
 @mixin headingsDefault($sizeValue, $lineValue, $spacingValue) {
   font-size: $sizeValue * 1px;

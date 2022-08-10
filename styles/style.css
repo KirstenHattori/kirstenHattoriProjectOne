@@ -413,10 +413,13 @@ header {
   background-position: center;
   background-size: contain;
   min-height: 85vh;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -424,26 +427,24 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-header h1,
-header h2 {
+header .headerTxtContainer {
+  text-align: left;
   z-index: 10;
 }
 header h2 {
   line-height: 84px;
+  line-height: 4.2rem;
 }
-
-.headerImgContainer {
-  margin: 0;
-}
-.headerImgContainer img {
-  position: sticky;
-  bottom: -5px;
+header img {
+  position: absolute;
+  right: 0;
+  bottom: -30px;
   z-index: 5;
 }
 
 .pagesMenu {
   background-color: #111010;
-  padding: 150px 0 100px;
+  padding: 240px 0 100px;
 }
 .pagesMenu ul {
   display: -webkit-box;
@@ -510,12 +511,15 @@ header h2 {
 .readMore .imgContainer img {
   -webkit-box-shadow: 25px 25px 1px #FF8327;
           box-shadow: 25px 25px 1px #FF8327;
+  position: relative;
+  top: -90px;
 }
-.readMore .imgContainer img.lastImg {
+.readMore .imgContainer .lastImg {
   -webkit-box-shadow: -25px 25px 1px #FF8327;
           box-shadow: -25px 25px 1px #FF8327;
   position: relative;
   right: 0;
+  top: 100px;
 }
 .readMore .txtContainer {
   width: 35%;
@@ -530,6 +534,7 @@ header h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-left: 50px;
 }
 .readMore .txtContainer .button {
   max-width: -webkit-fit-content;
@@ -540,11 +545,12 @@ header h2 {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  padding-right: 50px;
 }
 
 .party {
   background-color: #111010;
-  padding: 100px 0;
+  padding: 170px 0 130px;
   text-align: center;
 }
 .party h3 {

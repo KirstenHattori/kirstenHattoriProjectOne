@@ -18,13 +18,15 @@
 
     img {
     box-shadow: 25px 25px 1px $tertiary;
-    
+    position: relative;
+    top: -90px;
+    }
 
-    &.lastImg {
+    .lastImg {
     box-shadow: -25px 25px 1px $tertiary;
     position: relative;
     right: 0;
-    }
+    top: 100px;
     }
   }
   .txtContainer {
@@ -33,6 +35,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 50px;
 
     .button {
       max-width: fit-content;
@@ -41,6 +44,7 @@
   
   .lastTxtContainer {
     align-items: flex-end;
+    padding-right: 50px;
   }
     
 }
