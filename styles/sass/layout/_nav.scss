@@ -1,15 +1,16 @@
 .navBar {
   // ~~~ add a sticky navBar with JS
   // https: //www.w3schools.com/howto/howto_js_navbar_sticky.asp
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 15;
-  background-color: transparent;
-  width: 60%;
-  left: 20%;
+  background-color: $quaternary;
+  width: 100%;
+  // left: 20%;
 
   ul{
     margin: 0 auto;
+    width: 60%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
