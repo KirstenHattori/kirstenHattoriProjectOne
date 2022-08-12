@@ -411,7 +411,8 @@ header {
   background-color: #111010;
   background-image: url(../assets/home-image-1.jpg);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,6 +442,16 @@ header img {
   right: 0;
   bottom: -90px;
   z-index: 5;
+}
+@media (max-width: 411px) {
+  header h1 {
+    font-size: 84px;
+    font-size: 8.4rem;
+  }
+  header img {
+    width: 70vw;
+    bottom: -130px;
+  }
 }
 
 .pagesMenu {

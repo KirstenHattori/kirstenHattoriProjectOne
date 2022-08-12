@@ -3,7 +3,8 @@ header {
   background-color: $quaternary;
   background-image: url(../assets/home-image-1.jpg);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 85vh;
   // position: relative;
   display: flex;
@@ -48,6 +49,17 @@ header {
     // top: 270px;
     // right: 0;
     // bottom: 5;
+  }
+  
+  @include devices (mobile) {
+    h1 {
+      @include fontSize(84)
+    }
+
+    img {
+      width: 70vw;
+      bottom: -130px;
+    }
   }
 }
 

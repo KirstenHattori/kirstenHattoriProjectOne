@@ -17,3 +17,29 @@
   letter-spacing: $spacingValue * 1px;
   letter-spacing: ($spacingValue/20) * 1rem;
 }
+
+@mixin devices ($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 411px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media (max-width: 1366px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media (min-width: 1367px) {
+      @content;
+    }
+  }
+}
