@@ -7,19 +7,41 @@
   <title>Bar One</title>
   <script src="https://use.fontawesome.com/b9260320c7.js"></script>
 	<link rel="stylesheet" href="./styles/style.css">
+	<script src="./script.js"></script>
 </head>
 <body>
   <a href="#mainContent" class="skipLink">Skip to the main content.</a>
 
   <nav class="navBar">
     <div class="wrapper">
-      <ul>
-        <li><a href="./index.html" class="navigation">home</a></li>
-        <li><a href="#about" class="navigation">about</a></li>
-        <li><a href="./index.html" class="logo">Bar-One</a></li>
-        <li><a href="./blog.html" class="navigation">blog</a></li>
-        <li><a href="./contact.html" class="navigation">contact</a></li>
-      </ul>
+      <a href="./index.html" class="logo">Bar-One</a>
+
+      <button class="openMenu" id="hamburger">
+        <i class="icon fa fa-bars"></i>
+      </button>
+
+      <div class="slideOutNav">
+        <a href="./index.html" class="logo">Bar-One</a>
+        
+        <button class="closeMenu" id="closeMenu">
+          <i class="icon fa fa-times"></i>
+        </button>
+        
+        <nav>
+          <ul class="barMenu">
+            <li class="firstHalf"><ul>
+              <li><a href="./index.html" class="navigation">home</a></li>
+              <li><a href="#about" class="navigation">about</a></li>
+            </ul></li>
+
+            <li class="secondHalf"><ul>
+              <li><a href="./blog.html" class="navigation">blog</a></li>
+              <li><a href="./contact.html" class="navigation">contact</a></li>
+            </ul></li>
+          </ul>
+        </nav>
+      </div>
+  
     </div><!-- /.wrapper -->
   </nav><!-- /.navBar -->
 

@@ -1,4 +1,9 @@
 .navBar {
+
+
+  
+
+  @include devices(tablet) {
   // ~~~ add a sticky navBar with JS
   // https: //www.w3schools.com/howto/howto_js_navbar_sticky.asp
   position: sticky;
@@ -6,13 +11,43 @@
   z-index: 15;
   background-color: $quaternary;
   width: 100%;
-  // left: 20%;
 
-  ul{
-    margin: 0 auto;
-    width: 60vw;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    ul{
+      margin: 0 auto;
+      width: 60vw;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
   }
+}
+
+.slideOutNav {
+  background: $quaternary;
+  min-height: 100vh;
+  max-width: 480px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: -480px;
+  transition: 500ms;
+  z-index: 20;
+
+  &.open {
+    right: 0;
+  }
+}
+
+.slideOutNav a {
+  // @include
+  display: inline-block;
+  padding: 20px;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  transition: 300ms;
+}
+
+.slideOutNav a:hover,
+.slideOutNav a:focus {
+  background: $quaternary;
 }

@@ -380,31 +380,76 @@ a.button:focus {
   color: #BF2603;
 }
 
+button {
+  cursor: pointer;
+}
+button:hover, button:focus {
+  background-color: #FFF;
+  color: #BF2603;
+}
+button.openMenu, button.closeMenu {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
 .wrapper {
   max-width: 1280px;
   width: 85%;
   margin: 0 auto;
 }
 
-.navBar {
-  position: sticky;
-  top: 0;
-  z-index: 15;
-  background-color: #111010;
-  width: 100%;
+@media (min-width: 480px) {
+  .navBar {
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    background-color: #111010;
+    width: 100%;
+  }
+  .navBar ul {
+    margin: 0 auto;
+    width: 60vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
-.navBar ul {
-  margin: 0 auto;
-  width: 60vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+
+.slideOutNav {
+  background: #111010;
+  min-height: 100vh;
+  max-width: 480px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: -480px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  z-index: 20;
+}
+.slideOutNav.open {
+  right: 0;
+}
+
+.slideOutNav a {
+  display: inline-block;
+  padding: 20px;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.slideOutNav a:hover,
+.slideOutNav a:focus {
+  background: #111010;
 }
 
 header {
@@ -443,7 +488,7 @@ header img {
   bottom: -90px;
   z-index: 5;
 }
-@media (max-width: 411px) {
+@media (min-width: 320px) {
   header h1 {
     font-size: 84px;
     font-size: 8.4rem;

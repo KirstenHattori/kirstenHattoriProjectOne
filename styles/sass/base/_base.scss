@@ -65,6 +65,22 @@ a.button {
   }
 }
 
+button {
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: $secondary;
+  }
+
+  &.openMenu,
+  &.closeMenu {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+}
+
 .wrapper {
   max-width: 1280px;
   width: 85%;
