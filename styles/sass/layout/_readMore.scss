@@ -1,52 +1,92 @@
 .readMore {
   background-color: $quinary;
-  
+  display: flex;
   flex-wrap: wrap;
   padding: 50px 0;
-  
+
   .flexContainer {
-    margin: 0;
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
-  }
+    flex-wrap: wrap;
 
-  .imgContainer {
-    // width: 45%;
-    margin: 0;
-    padding: 0;
-    
+    .txtContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 90%;
+      margin: 20px auto;
+  
+      .button {
+        max-width: fit-content;
+      }
+    }
+
+    .lastTxtContainer {
+      text-align: right;
+      align-items: flex-end;
+    }
+
     img {
-      box-shadow: 25px 25px 1px $tertiary;
+      width: 95%;
+    }
+
+    .firstImg {
+      box-shadow: 5px 5px 1px $tertiary;
       position: relative;
-      top: -90px;
-      width: 45vw;
+      top: -60px;
     }
 
     .lastImg {
-    box-shadow: -25px 25px 1px $tertiary;
-    position: relative;
-    right: 0;
-    top: 100px;
+      box-shadow: -5px 5px 1px $tertiary;
+      position: relative;
+      left: calc(100vw - 95%);
+      bottom: -60px;
     }
-  }
-  .txtContainer {
-    width: 35%;
-    min-width: 35%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 50px;
 
-    .button {
-      max-width: fit-content;
+    @include devices(tablet) {
+      .firstImg {
+        box-shadow: 15px 15px 1px $tertiary;
+        top: -70px;
+      }
+
+      .lastImg {
+        box-shadow: -15px 15px 1px $tertiary;
+        bottom: -70px;
+      }
+    }
+
+    @include devices(laptop) {
+      .txtContainer {
+        max-width: 35%;
+      }
+
+      img {
+        width: 40%;
+        max-width: 40%;
+        height: auto;
+      }
+    
+      .firstImg {
+        box-shadow: 25px 25px 1px $tertiary;
+        top: -80px;
+      }
+
+      .lastImg {
+        box-shadow: -25px 25px 1px $tertiary;
+        left: 0;
+        bottom: -60px;
+      }
+    }
+
+    @include devices(desktop) {
+      .firstImg {
+        top: -100px;
+      }
+
+      .lastImg {
+        bottom: -80px;
+      }
     }
   }
-  
-  .lastTxtContainer {
-    align-items: flex-end;
-    padding-right: 50px;
-  }
-    
 }
 

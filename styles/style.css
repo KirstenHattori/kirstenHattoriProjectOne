@@ -357,6 +357,10 @@ ul {
   padding: 0;
 }
 
+p {
+  margin: 0 0 20px;
+}
+
 img {
   max-width: 100%;
 }
@@ -398,7 +402,7 @@ button.openMenu, button.closeMenu {
 
 .wrapper {
   max-width: 1280px;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -422,7 +426,7 @@ button.openMenu, button.closeMenu {
           justify-content: space-between;
   border: 1px solid cadetblue;
 }
-@media (min-width: 700px) {
+@media (min-width: 481px) {
   .navBar .mobileBar {
     display: none;
   }
@@ -430,7 +434,7 @@ button.openMenu, button.closeMenu {
     display: none;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 481px) {
   .navBar .closeMenu {
     display: none;
   }
@@ -457,7 +461,7 @@ button.openMenu, button.closeMenu {
 .navBar .slideOutNav a:hover, .navBar .slideOutNav a:focus {
   background: #111010;
 }
-@media (min-width: 700px) {
+@media (min-width: 481px) {
   .navBar .slideOutNav {
     position: sticky;
     top: 0;
@@ -564,6 +568,7 @@ header img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 30px;
 }
 .pagesMenu ul .iconContainer {
   max-width: 50px;
@@ -587,7 +592,7 @@ header img {
 .pagesMenu ul .txtContainer p {
   margin-top: 15px;
 }
-@media (min-width: 700px) {
+@media (min-width: 481px) {
   .pagesMenu ul .menuItem {
     width: 48%;
   }
@@ -595,41 +600,24 @@ header img {
 
 .readMore {
   background-color: #220303;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 50px 0;
 }
 .readMore .flexContainer {
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-.readMore .imgContainer {
-  margin: 0;
-  padding: 0;
-}
-.readMore .imgContainer img {
-  -webkit-box-shadow: 25px 25px 1px #FF8327;
-          box-shadow: 25px 25px 1px #FF8327;
-  position: relative;
-  top: -90px;
-  width: 45vw;
-}
-.readMore .imgContainer .lastImg {
-  -webkit-box-shadow: -25px 25px 1px #FF8327;
-          box-shadow: -25px 25px 1px #FF8327;
-  position: relative;
-  right: 0;
-  top: 100px;
-}
-.readMore .txtContainer {
-  width: 35%;
-  min-width: 35%;
+.readMore .flexContainer .txtContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -640,18 +628,76 @@ header img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 50px;
+  width: 90%;
+  margin: 20px auto;
 }
-.readMore .txtContainer .button {
+.readMore .flexContainer .txtContainer .button {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
-.readMore .lastTxtContainer {
+.readMore .flexContainer .lastTxtContainer {
+  text-align: right;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding-right: 50px;
+}
+.readMore .flexContainer img {
+  width: 95%;
+}
+.readMore .flexContainer .firstImg {
+  -webkit-box-shadow: 5px 5px 1px #FF8327;
+          box-shadow: 5px 5px 1px #FF8327;
+  position: relative;
+  top: -60px;
+}
+.readMore .flexContainer .lastImg {
+  -webkit-box-shadow: -5px 5px 1px #FF8327;
+          box-shadow: -5px 5px 1px #FF8327;
+  position: relative;
+  left: calc(100vw - 95%);
+  bottom: -60px;
+}
+@media (min-width: 481px) {
+  .readMore .flexContainer .firstImg {
+    -webkit-box-shadow: 15px 15px 1px #FF8327;
+            box-shadow: 15px 15px 1px #FF8327;
+    top: -70px;
+  }
+  .readMore .flexContainer .lastImg {
+    -webkit-box-shadow: -15px 15px 1px #FF8327;
+            box-shadow: -15px 15px 1px #FF8327;
+    bottom: -70px;
+  }
+}
+@media (min-width: 769px) {
+  .readMore .flexContainer .txtContainer {
+    max-width: 35%;
+  }
+  .readMore .flexContainer img {
+    width: 40%;
+    max-width: 40%;
+    height: auto;
+  }
+  .readMore .flexContainer .firstImg {
+    -webkit-box-shadow: 25px 25px 1px #FF8327;
+            box-shadow: 25px 25px 1px #FF8327;
+    top: -80px;
+  }
+  .readMore .flexContainer .lastImg {
+    -webkit-box-shadow: -25px 25px 1px #FF8327;
+            box-shadow: -25px 25px 1px #FF8327;
+    left: 0;
+    bottom: -60px;
+  }
+}
+@media (min-width: 1025px) {
+  .readMore .flexContainer .firstImg {
+    top: -100px;
+  }
+  .readMore .flexContainer .lastImg {
+    bottom: -80px;
+  }
 }
 
 .party {

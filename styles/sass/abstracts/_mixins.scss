@@ -26,7 +26,7 @@
   }
 
   @if $breakpoint == tablet {
-    @media (min-width: 700px) {
+    @media (min-width: 481px) {
       @content;
     }
   }
@@ -38,7 +38,7 @@
   }
 
   @if $breakpoint == desktop {
-    @media (min-width: 1367px) {
+    @media (min-width: 1025px) {
       @content;
     }
   }
