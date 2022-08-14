@@ -526,10 +526,10 @@ header h2 {
   line-height: 4.2rem;
 }
 header img {
-  width: 50vw;
+  width: 50%;
   position: absolute;
   right: 0;
-  bottom: -90px;
+  bottom: -10%;
   z-index: 5;
 }
 @media (min-width: 320px) {
@@ -539,7 +539,7 @@ header img {
   }
   header img {
     width: 70vw;
-    bottom: -130px;
+    bottom: -5%;
   }
 }
 
