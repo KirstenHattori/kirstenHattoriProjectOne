@@ -558,7 +558,6 @@ header img {
           justify-content: space-between;
 }
 .pagesMenu ul .menuItem {
-  width: 48%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,7 +565,7 @@ header img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.pagesMenu ul .menuItem .iconContainer {
+.pagesMenu ul .iconContainer {
   max-width: 50px;
   min-width: 50px;
   max-height: 50px;
@@ -585,8 +584,13 @@ header img {
           align-items: center;
   border-radius: 50%;
 }
-.pagesMenu ul .menuItem .txtContainer p {
+.pagesMenu ul .txtContainer p {
   margin-top: 15px;
+}
+@media (min-width: 700px) {
+  .pagesMenu ul .menuItem {
+    width: 48%;
+  }
 }
 
 .readMore {
