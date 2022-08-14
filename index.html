@@ -14,27 +14,35 @@
 
   <nav class="navBar">
     <div class="wrapper">
-      <a href="./index.html" class="logo">Bar-One</a>
-
-      <button class="openMenu" id="hamburger">
-        <i class="icon fa fa-bars"></i>
-      </button>
-
-      <div class="slideOutNav">
+      <div class="mobileBar closed">
         <a href="./index.html" class="logo">Bar-One</a>
         
-        <button class="closeMenu" id="closeMenu">
-          <i class="icon fa fa-times"></i>
+        <button class="openMenu" id="hamburger">
+          <i class="icon fa fa-bars"></i>
         </button>
+      </div>
+
+      <div class="slideOutNav">
+        <div class="mobileBar opened">
+          <a href="./index.html" class="logo">Bar-One</a>
+        
+          <button class="closeMenu" id="closeMenu">
+            <i class="icon fa fa-times"></i>
+          </button>
+        </div>
+        <!-- <a href="./index.html" class="logo">Bar-One</a> -->
+        
         
         <nav>
           <ul class="barMenu">
-            <li class="firstHalf"><ul>
+            <li><ul class="firstHalf">
               <li><a href="./index.html" class="navigation">home</a></li>
               <li><a href="#about" class="navigation">about</a></li>
             </ul></li>
-
-            <li class="secondHalf"><ul>
+            <li>
+              <a href="./index.html" class="logo hideInSlideOut">Bar-One</a>
+            </li>
+            <li><ul class="secondHalf">
               <li><a href="./blog.html" class="navigation">blog</a></li>
               <li><a href="./contact.html" class="navigation">contact</a></li>
             </ul></li>

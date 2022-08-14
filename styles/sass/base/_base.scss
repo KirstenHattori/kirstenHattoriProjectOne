@@ -39,6 +39,8 @@ img {
 }
 
 a {
+  display: inline-block;
+
   &:hover,
   &:focus {
     color: $secondary;

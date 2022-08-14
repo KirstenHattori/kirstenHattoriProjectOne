@@ -361,6 +361,9 @@ img {
   max-width: 100%;
 }
 
+a {
+  display: inline-block;
+}
 a:hover, a:focus {
   color: #BF2603;
 }
@@ -399,57 +402,98 @@ button.openMenu, button.closeMenu {
   margin: 0 auto;
 }
 
-@media (min-width: 480px) {
-  .navBar {
+.navBar {
+  border: 1px solid fuchsia;
+}
+.navBar .logo {
+  text-align: center;
+  border: 1px solid salmon;
+  position: sticky;
+}
+.navBar .hideOnSlideOut {
+  border: 3px dotted firebrick;
+}
+.navBar .mobileBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid cadetblue;
+}
+@media (min-width: 700px) {
+  .navBar .mobileBar {
+    display: none;
+  }
+  .navBar .mobileBar .logo {
+    display: none;
+  }
+}
+@media (min-width: 700px) {
+  .navBar .closeMenu {
+    display: none;
+  }
+}
+.navBar .slideOutNav {
+  background: #111010;
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: -1000px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 20;
+}
+.navBar .slideOutNav.open {
+  right: 0;
+}
+.navBar .slideOutNav a {
+  width: 100%;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.navBar .slideOutNav a:hover, .navBar .slideOutNav a:focus {
+  background: #111010;
+}
+@media (min-width: 700px) {
+  .navBar .slideOutNav {
     position: sticky;
     top: 0;
     z-index: 15;
     background-color: #111010;
     width: 100%;
+    min-height: 20px;
+    max-width: 100%;
+    right: 0;
+    left: 0;
   }
-  .navBar ul {
+  .navBar .slideOutNav .barMenu {
     margin: 0 auto;
-    width: 60vw;
+    width: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    border: 1px solid magenta;
   }
-}
-
-.slideOutNav {
-  background: #111010;
-  min-height: 100vh;
-  max-width: 480px;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  right: -480px;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-  z-index: 20;
-}
-.slideOutNav.open {
-  right: 0;
-}
-
-.slideOutNav a {
-  display: inline-block;
-  padding: 20px;
-  border-bottom: 1px solid gray;
-  width: 100%;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-}
-
-.slideOutNav a:hover,
-.slideOutNav a:focus {
-  background: #111010;
+  .navBar .slideOutNav .barMenu .firstHalf,
+.navBar .slideOutNav .barMenu .secondHalf {
+    border: 1px solid maroon;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 header {
