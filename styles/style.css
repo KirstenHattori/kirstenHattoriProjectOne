@@ -784,13 +784,23 @@ header img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 100px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px 0;
 }
 .gallery .galleryContainer li {
-  width: 32%;
+  margin: 7px 0;
+}
+@media (min-width: 481px) {
+  .gallery .galleryContainer {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 100px 0;
+  }
+  .gallery .galleryContainer li {
+    width: 32%;
+  }
 }
 
 footer {

@@ -3,11 +3,27 @@
 
   .galleryContainer {
     display: flex;
-    justify-content: space-between;
-    padding: 100px 0;
+    flex-wrap: wrap;
+    padding: 50px 0;
 
     li {
-      width: 32%;
+      margin: 7px 0;
+    }
+
+    // trying to get the img to take up the whole width of the wrapper:
+    // img {
+    //   min-width: 100%;
+    // }
+  }
+
+  @include devices(tablet) {
+    .galleryContainer {
+      justify-content: space-between;
+      padding: 100px 0;
+      
+      li {
+        width: 32%;
+      }
     }
   }
 }
