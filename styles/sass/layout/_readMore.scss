@@ -1,7 +1,8 @@
 .readMore {
   background-color: $quinary;
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
   padding: 50px 0;
 
   .flexContainer {
@@ -28,6 +29,7 @@
 
     img {
       width: 95%;
+
     }
 
     .firstImg {
@@ -44,6 +46,22 @@
     }
 
     @include devices(tablet) {
+      .txtContainer {
+        // width: 40%;
+        padding-left: 2vw;
+      }
+
+      .lastTxtContainer {
+        padding-right: 2vw;
+        padding-left: 0px;
+      }
+
+      img {
+        min-width: 450px;
+        // width: 40%;
+        height: auto;
+      }
+
       .firstImg {
         box-shadow: 15px 15px 1px $tertiary;
         top: -70px;
@@ -57,7 +75,13 @@
 
     @include devices(laptop) {
       .txtContainer {
-        max-width: 35%;
+        width: 35%;
+        padding-left: 6vw;
+      }
+      
+      .lastTxtContainer {
+        padding-right: 6vw;
+        padding-left: 0px;
       }
 
       img {
