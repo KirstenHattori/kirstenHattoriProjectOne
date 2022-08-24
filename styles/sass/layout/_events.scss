@@ -5,19 +5,22 @@
   .flexContainer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     .imgContainer {
-      width: 25%;
+      visibility: hidden;
+    //   width: 25%;
 
-      img {
-    box-shadow: -20px 20px 1px $tertiary;
-      }
+    //   img {
+    // box-shadow: -20px 20px 1px $tertiary;
+    //   }
     }
 
     .txtContainer {
-      max-width: 65%;
+      // width: 90%;
+      // text-align: center;
 
+      // display: flex;
+      // flex-direction: column;
       h3 {
         color: $tertiary;
       }
@@ -25,6 +28,27 @@
       p {
         margin-top: 15px;
       }
+    }
+  }
+
+  @include devices(laptop) {
+    .flexContainer {
+      align-items: center;
+    }
+
+    .imgContainer {
+      visibility: visible;
+      width: 25%;
+  
+      img {
+        box-shadow: -20px 20px 1px $tertiary;
+        visibility: visible;
+      }
+    }
+
+    .txtContainer {
+      max-width: 65%;
+      text-align: left;
     }
   }
 }
