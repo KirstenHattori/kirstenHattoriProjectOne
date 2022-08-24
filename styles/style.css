@@ -720,7 +720,12 @@ header img {
   color: #FF8327;
 }
 .party p {
-  padding: 0 100px;
+  padding: 20px 0;
+}
+@media (min-width: 769px) {
+  .party p {
+    padding: 0 100px;
+  }
 }
 
 .imgBreak {

@@ -8,6 +8,14 @@
   }
 
   p {
-    padding: 0 100px;
+    padding: 20px 0;
+  }
+
+  @include devices(laptop) {
+    // width: ;
+    p {
+      padding: 0 100px;
+    }
+    
   }
 }
