@@ -407,15 +407,35 @@ button.openMenu, button.closeMenu {
 }
 
 .navBar {
-  border: 1px solid fuchsia;
+  visibility: hidden;
 }
+@media (min-width: 481px) {
+  .navBar {
+    visibility: visible;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    background-color: #111010;
+    width: 100%;
+  }
+  .navBar ul {
+    margin: 0 auto;
+    width: 60vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .navBar .logo {
   text-align: center;
-  border: 1px solid salmon;
   position: sticky;
-}
-.navBar .hideOnSlideOut {
-  border: 3px dotted firebrick;
 }
 .navBar .mobileBar {
   display: -webkit-box;
@@ -424,7 +444,6 @@ button.openMenu, button.closeMenu {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid cadetblue;
 }
 @media (min-width: 481px) {
   .navBar .mobileBar {
@@ -440,7 +459,6 @@ button.openMenu, button.closeMenu {
   }
 }
 .navBar .slideOutNav {
-  background: #111010;
   min-height: 100vh;
   width: 100vw;
   position: fixed;
@@ -466,7 +484,6 @@ button.openMenu, button.closeMenu {
     position: sticky;
     top: 0;
     z-index: 15;
-    background-color: #111010;
     width: 100%;
     min-height: 20px;
     max-width: 100%;
@@ -485,12 +502,10 @@ button.openMenu, button.closeMenu {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border: 1px solid magenta;
   }
   .navBar .slideOutNav .barMenu .firstHalf,
 .navBar .slideOutNav .barMenu .secondHalf {
-    border: 1px solid maroon;
-    width: 100%;
+    width: 120%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

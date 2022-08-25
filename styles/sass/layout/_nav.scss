@@ -1,19 +1,41 @@
 .navBar {
+  visibility: hidden;
+
+  @include devices(tablet){
+    visibility: visible;
+    // ~~~ add a sticky navBar with JS
+    // https: //www.w3schools.com/howto/howto_js_navbar_sticky.asp
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    background-color: $quaternary;
+    width: 100%;
+    // left: 20%;
+
+    ul {
+      margin: 0 auto;
+      width: 60vw;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+}
+
+
+
+.navBar {
   .logo {
       text-align: center;
-      border: 1px solid salmon;
       // z-index: 25;
       position: sticky;
     }
-    .hideOnSlideOut {
-      border: 3px dotted firebrick;
-    }
+    // .hideOnSlideOut {
+    // }
 
-  border: 1px solid fuchsia;
   .mobileBar {
     display: flex;
     justify-content: space-between;
-    border: 1px solid cadetblue;
 
     @include devices(tablet) {
       display: none;
@@ -30,7 +52,7 @@
     }
   }
   .slideOutNav {
-    background: $quaternary;
+    // background: $quaternary;
     min-height: 100vh;
     // max-width: 480px;
     width: 100vw;
@@ -60,7 +82,7 @@
       position: sticky;
       top: 0;
       z-index: 15;
-      background-color: $quaternary;
+      // background-color: $quaternary;
       width: 100%;
       min-height: 20px;
       max-width: 100%;
@@ -73,12 +95,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-          border: 1px solid magenta;
 
         .firstHalf,
         .secondHalf {
-          border: 1px solid maroon;
-          width: 100%;
+          width: 120%;
           display: flex;
           justify-content: space-between;
         }
