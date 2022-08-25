@@ -408,6 +408,7 @@ button.openMenu, button.closeMenu {
 
 .navBar {
   visibility: hidden;
+  position: absolute;
 }
 @media (min-width: 481px) {
   .navBar {
@@ -433,11 +434,13 @@ button.openMenu, button.closeMenu {
   }
 }
 
-.navBar .logo {
-  text-align: center;
-  position: sticky;
+@media (min-width: 481px) {
+  .navMobile {
+    visibility: hidden;
+    position: absolute;
+  }
 }
-.navBar .mobileBar {
+.navMobile .mobileNavHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -445,20 +448,9 @@ button.openMenu, button.closeMenu {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (min-width: 481px) {
-  .navBar .mobileBar {
-    display: none;
-  }
-  .navBar .mobileBar .logo {
-    display: none;
-  }
-}
-@media (min-width: 481px) {
-  .navBar .closeMenu {
-    display: none;
-  }
-}
-.navBar .slideOutNav {
+
+.slideOut {
+  background: #111010;
   min-height: 100vh;
   width: 100vw;
   position: fixed;
@@ -468,51 +460,19 @@ button.openMenu, button.closeMenu {
   transition: 0.5s;
   z-index: 20;
 }
-.navBar .slideOutNav.open {
+.slideOut li a {
+  padding: 9px 0;
+}
+.slideOut.open {
   right: 0;
 }
-.navBar .slideOutNav a {
+.slideOut a {
   width: 100%;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-.navBar .slideOutNav a:hover, .navBar .slideOutNav a:focus {
+.slideOut a:hover, .slideOut a:focus {
   background: #111010;
-}
-@media (min-width: 481px) {
-  .navBar .slideOutNav {
-    position: sticky;
-    top: 0;
-    z-index: 15;
-    width: 100%;
-    min-height: 20px;
-    max-width: 100%;
-    right: 0;
-    left: 0;
-  }
-  .navBar .slideOutNav .barMenu {
-    margin: 0 auto;
-    width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .navBar .slideOutNav .barMenu .firstHalf,
-.navBar .slideOutNav .barMenu .secondHalf {
-    width: 120%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
 }
 
 header {
@@ -804,7 +764,7 @@ header img {
   padding: 50px 0;
 }
 .gallery .galleryContainer li {
-  margin: 7px 0;
+  margin: 10px auto;
 }
 @media (min-width: 481px) {
   .gallery .galleryContainer {
