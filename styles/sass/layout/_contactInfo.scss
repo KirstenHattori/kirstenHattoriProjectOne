@@ -1,5 +1,20 @@
 .contactInfo {
+  @include devices(laptop){
+    padding-top: 20vh;
+  }
+
   p{
     margin: 0;
+  }
+  ul,
+  .email {
+    margin-top: 20px;
+  }
+  .socialsIcons {
+    display: flex;
+
+    a {
+      padding-right: 30px;
+    }
   }
 }

@@ -895,8 +895,25 @@ header img {
   }
 }
 
+@media (min-width: 769px) {
+  .contactInfo {
+    padding-top: 20vh;
+  }
+}
 .contactInfo p {
   margin: 0;
+}
+.contactInfo ul,
+.contactInfo .email {
+  margin-top: 20px;
+}
+.contactInfo .socialsIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contactInfo .socialsIcons a {
+  padding-right: 30px;
 }
 
 footer {
