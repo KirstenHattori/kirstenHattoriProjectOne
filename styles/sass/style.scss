@@ -6,12 +6,21 @@
 
 @import "./layout/nav";
 @import "./layout/header";
+
+// homepage (only) sections
 @import "./layout/pagesMenu";
 @import "./layout/readMore";
 @import "./layout/party";
 @import "./layout/imgBreak";
 @import "./layout/events";
 @import "./layout/gallery";
+
+// contact page (only) sections
+@import "./layout/contactForm";
+@import "./layout/contactInfo";
+
+
+
 @import "./layout/footer";
 
 @import "./pages/home";

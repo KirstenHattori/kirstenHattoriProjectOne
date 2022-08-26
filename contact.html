@@ -71,25 +71,31 @@
   </header>
   
   <main id="mainContent">
-    <div class="wrapper">
-      <form action="" method="" class="contactForm" name="contactForm">
+    <section class="contactForm">
+      <!-- <div class="wrapper"> -->
+        <form action="" method="" class="form" name="form">
+          
+          <div class="formTopLine">
+            <label for="name" class="sr-only">name</label>
+            <input type="text" id="name" placeholder="Name">
+            
+            <label for="email" class="sr-only">email</label>
+            <input type="email" id="email" placeholder="Email address">
+          </div>
+          <!-- /.formTopLine -->
+          
+          <label for="message" class="sr-only">message for me</label>
+          <textarea name="message" id="message" rows="8" placeholder="Message"></textarea>
+          
+          <button class="button">Submit</button>
+          
+        </form>
+      <!-- </div> -->
+      <!-- /.wrapper -->
+    </section>
+    <!-- /.contactForm -->
 
-        <label for="name" class="sr-only">name</label>
-        <input type="text" id="name" placeholder="Name">
-
-        <label for="email" class="sr-only">email</label>
-        <input type="email" id="email" placeholder="Email">
-
-        <label for="message" class="sr-only">message for me</label>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-
-        <button class="button">Submit</button>
-
-      </form>
-    </div>
-    <!-- /.wrapper -->
-
-    <div class="contactInfo">
+    <section class="contactInfo">
       <div class="wrapper">
         <ul class="flexContainer">
           <li>
@@ -113,7 +119,9 @@
           </li>
         </ul>
       </div>
-    </div>
+      <!-- /.wrapper -->
+    </section>
+    <!-- /.contactInfo -->
 
   </main>
 

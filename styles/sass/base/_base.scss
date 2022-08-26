@@ -35,6 +35,15 @@ ul {
   padding: 0;
 }
 
+form {
+  margin: 0 auto 5%;
+  padding: 50px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: $primary;
+}
+
 p {
   margin: 0 0 20px;
 }
@@ -74,6 +83,8 @@ a.button {
 
 button {
   cursor: pointer;
+  border: none;
+
   &:hover,
   &:focus {
     background-color: $primary;

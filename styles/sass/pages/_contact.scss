@@ -1,5 +1,15 @@
 #mainContent {
   background-color: $quaternary;
+  padding: 0 0 10vh;
+  // margin: 0 10%;
+  
+  @include devices(laptop) {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 0 8vw 0;
+  // padding: 0 0;
+  }
 
   .wrapper {
     width: 80%;

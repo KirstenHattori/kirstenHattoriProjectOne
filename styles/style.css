@@ -277,7 +277,9 @@ h4 {
   letter-spacing: 0.09rem;
 }
 
-p {
+p,
+input,
+textarea {
   font-family: "Chathura", sans-serif;
   font-size: 39px;
   font-size: 1.95rem;
@@ -285,6 +287,32 @@ p {
   line-height: 1.5rem;
   letter-spacing: 1.9px;
   letter-spacing: 0.095rem;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #FFF;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  color: #FFF;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #FFF;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  opacity: 1;
+  color: #FFF;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #FFF;
 }
 
 a {
@@ -357,6 +385,21 @@ ul {
   padding: 0;
 }
 
+form {
+  margin: 0 auto 5%;
+  padding: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #FFF;
+}
+
 p {
   margin: 0 0 20px;
 }
@@ -389,6 +432,7 @@ a.button:focus {
 
 button {
   cursor: pointer;
+  border: none;
 }
 button:hover, button:focus {
   background-color: #FFF;
@@ -789,6 +833,72 @@ header img {
   }
 }
 
+.contactForm form {
+  width: 80%;
+  position: relative;
+  top: -15vh;
+  right: -3vw;
+  -webkit-box-shadow: 2vw 2vw 1px #FF8327;
+          box-shadow: 2vw 2vw 1px #FF8327;
+  padding: 3vh 5vw 4vh;
+  background-color: #220303;
+}
+.contactForm form input,
+.contactForm form textarea,
+.contactForm form button {
+  margin-top: 30px;
+}
+.contactForm form input,
+.contactForm form textarea {
+  border: 0;
+  border-bottom: 2px solid #FFF;
+  background-color: inherit;
+  margin-bottom: 3%;
+  width: 100%;
+  padding-left: 20px;
+}
+@media (min-width: 481px) {
+  .contactForm form input,
+.contactForm form textarea {
+    padding-left: 30px;
+  }
+}
+.contactForm form textarea {
+  border: 1px solid #FFF;
+  width: 100%;
+  padding-top: 20px;
+}
+@media (min-width: 481px) {
+  .contactForm form textarea {
+    padding-top: 30px;
+  }
+}
+@media (min-width: 481px) {
+  .contactForm form {
+    width: 85%;
+  }
+  .contactForm form .formTopLine {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contactForm form .formTopLine input {
+    width: 47%;
+  }
+}
+@media (min-width: 769px) {
+  .contactForm form {
+    width: 90%;
+  }
+}
+
+.contactInfo p {
+  margin: 0;
+}
+
 footer {
   text-align: center;
 }
@@ -801,6 +911,22 @@ footer a {
 
 #mainContent {
   background-color: #111010;
+  padding: 0 0 10vh;
+}
+@media (min-width: 769px) {
+  #mainContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 8vw 0;
+  }
 }
 #mainContent .wrapper {
   width: 80%;

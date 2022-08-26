@@ -48,10 +48,20 @@ h3 {
 h4 {
   @include headingsDefault(58, 48, 1.8);
 }
-p {
+p,
+input,
+textarea {
   font-family: $secondaryFont;
   @include headingsDefault(39, 30, 1.9);
 }
+input,
+textarea {
+  &::placeholder {
+    opacity: 1;
+    color: $primary;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -82,3 +92,4 @@ a.button {
   @include headingsDefault(38, 48, 1.8);
   text-transform: capitalize;
 }
+
