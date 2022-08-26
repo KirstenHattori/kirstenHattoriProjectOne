@@ -397,7 +397,59 @@ form {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+form input,
+form textarea,
+form button {
+  margin-top: 30px;
+}
+form input,
+form textarea {
+  margin-bottom: 3%;
+  width: 100%;
+  padding-left: 20px;
   color: #FFF;
+}
+form input:focus, form input:hover,
+form textarea:focus,
+form textarea:hover {
+  color: #FFF;
+}
+@media (min-width: 481px) {
+  form input,
+form textarea {
+    padding-left: 30px;
+  }
+}
+form textarea {
+  width: 100%;
+  padding-top: 20px;
+}
+@media (min-width: 481px) {
+  form textarea {
+    padding-top: 30px;
+  }
+}
+@media (min-width: 481px) {
+  form {
+    width: 85%;
+  }
+  form .formTopLine {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  form .formTopLine input {
+    width: 47%;
+  }
+}
+@media (min-width: 769px) {
+  form {
+    width: 90%;
+  }
 }
 
 p {
@@ -433,6 +485,8 @@ a.button:focus {
 button {
   cursor: pointer;
   border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 button:hover, button:focus {
   background-color: #FFF;
@@ -853,57 +907,17 @@ header img {
           box-shadow: 2vw 2vw 1px #FF8327;
   padding: 3vh 5vw 4vh;
   background-color: #220303;
-}
-.contactForm form input,
-.contactForm form textarea,
-.contactForm form button {
-  margin-top: 30px;
+  color: #FFF;
 }
 .contactForm form input,
 .contactForm form textarea {
   border: 0;
   border-bottom: 2px solid #FFF;
   background-color: inherit;
-  margin-bottom: 3%;
-  width: 100%;
-  padding-left: 20px;
-}
-@media (min-width: 481px) {
-  .contactForm form input,
-.contactForm form textarea {
-    padding-left: 30px;
-  }
 }
 .contactForm form textarea {
+  color: #FFF;
   border: 1px solid #FFF;
-  width: 100%;
-  padding-top: 20px;
-}
-@media (min-width: 481px) {
-  .contactForm form textarea {
-    padding-top: 30px;
-  }
-}
-@media (min-width: 481px) {
-  .contactForm form {
-    width: 85%;
-  }
-  .contactForm form .formTopLine {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .contactForm form .formTopLine input {
-    width: 47%;
-  }
-}
-@media (min-width: 769px) {
-  .contactForm form {
-    width: 90%;
-  }
 }
 
 @media (min-width: 769px) {
@@ -925,6 +939,19 @@ header img {
 }
 .contactInfo .socialsIcons a {
   padding-right: 30px;
+}
+
+.commentsForm form {
+  width: 80%;
+}
+.commentsForm form input,
+.commentsForm form textarea {
+  border: 0;
+  border-bottom: 2px solid #FF8327;
+  background-color: inherit;
+}
+.commentsForm form textarea {
+  border: 1px solid #FF8327;
 }
 
 footer {
@@ -958,4 +985,29 @@ footer a {
 }
 #mainContent .wrapper {
   width: 80%;
+}
+
+#mainContent {
+  background-color: #111010;
+}
+@media (min-width: 769px) {
+  #mainContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 8vw 0;
+  }
+}
+#mainContent .wrapper {
+  width: 80%;
+}
+#mainContent .accent {
+  color: #FF8327;
 }

@@ -1,0 +1,19 @@
+#mainContent {
+  background-color: $quaternary;
+  
+  @include devices(laptop) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 8vw 0;
+    // padding: 0 0;
+  }
+
+  .wrapper {
+    width: 80%;
+  }
+  
+  .accent {
+    color: $tertiary;
+  }
+}

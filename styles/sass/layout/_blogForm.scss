@@ -1,0 +1,15 @@
+.commentsForm{
+
+  form {
+    width: 80%;
+    
+    input,
+    textarea {
+      @include inputsAndTextareas(2, $tertiary);
+    }
+    
+    textarea {
+      border: 1px solid $tertiary;
+    }
+  }
+}
