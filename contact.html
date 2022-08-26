@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <script src="https://use.fontawesome.com/b9260320c7.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="./script.js"></script>
+</head>
+<body>
+  <a href="#mainContent" class="skipLink">Skip to the main content.</a>
+  
+  <nav class="navBar">
+    <div class="wrapper">
+      <ul>
+        <li><a href="./index.html" class="navigation">home</a></li>
+        <li><a href="#about" class="navigation">about</a></li>
+        <li><a href="./index.html" class="logo">Bar-One</a></li>
+        <li><a href="./blog.html" class="navigation">blog</a></li>
+        <li><a href="./contact.html" class="navigation">contact</a></li>
+      </ul>
+    </div><!-- /.wrapper -->
+  </nav><!-- /.navBar -->
+  
+  <nav class="navMobile">
+
+    <!-- closed mobile nav -->
+    <div class="mobileNavHeader closed wrapper">
+      <a href="./index.html" class="logo">Bar-One</a>
+  
+      <button class="openMenu" id="hamburger">
+        <i class="icon fa fa-bars"></i>
+      </button>
+    </div>
+    <!-- /.mobileNavHeader .closed .wrapper-->
+  
+    <!-- opened mobile nav -->
+    <div class="slideOut">
+      <!-- header of the the opened mobile nav = same styling as closed version -->
+      <div class="mobileNavHeader opened wrapper">
+        <a href="./index.html" class="logo">Bar-One</a>
+  
+        <button class="closeMenu" id="closeMenu">
+          <i class="icon fa fa-times"></i>
+        </button>
+      </div>
+      <!-- /.mobileNavHeader .opened .wrapper -->
+  
+      <nav>
+        <ul class="mobileNavLinks wrapper">
+          <li><a href="./index.html" class="navigation">home</a></li>
+          <li><a href="#about" class="navigation">about</a></li>
+          <li><a href="./blog.html" class="navigation">blog</a></li>
+          <li><a href="./contact.html" class="navigation">contact</a></li>
+        </ul>
+      </nav>
+      <!-- /.mobileNavLinks .wrapper-->
+    </div>
+    <!-- /.slideOut -->
+
+  </nav>
+  <!-- /.navMobile -->
+
+  <header class="contactHeader"></header>
+  
+  <main id="mainContent"></main>
+
+  <footer>
+    <div class="wrapper">
+      <p>Copyright © 2019 <a href="https://junocollege.com/">HackerYou</a></p>
+    </div><!-- /.wrapper -->
+  </footer>
+</body>
+</html>
