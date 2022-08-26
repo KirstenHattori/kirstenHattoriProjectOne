@@ -1,0 +1,56 @@
+aside {
+  background-color: $quaternary;
+  margin: 9vh 0 0;
+  min-width: 300px;
+  max-width: 600px;
+  padding-top: 20vh;
+  .wrapper {
+    background-color: $quinary;
+    padding: 0 3vw;
+    
+    img {
+      position: relative;  
+      left: -20%;
+      top: -3vh;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    div {
+      margin-bottom: 3vh;
+    }
+
+    ul.posts {
+      padding-bottom: 3vw;
+      // li {
+      //   color: $primary;
+      // }
+    }
+    ul p::before {
+      content: '\25CF';
+        color: $secondary;
+        display: inline-block;
+        /* Needed to add space between the bullet and the text */
+        width: 1.5em;
+        /* Also needed for space (tweak if needed) */
+        font-size: medium;
+    }
+  }
+
+  @include devices(laptop) {
+    .wrapper {
+      width: 15vw;
+
+    // .imgPositionContainer {
+    //   height: 305px;
+    //   img {
+    //     position: absolute;
+    //     left: 0;
+    //     top: 10vh;
+    //   }
+    // }
+    }
+  }
+}

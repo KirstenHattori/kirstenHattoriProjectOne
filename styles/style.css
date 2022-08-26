@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&display=swap");
 html {
@@ -917,7 +918,7 @@ header img {
 }
 .contactForm form textarea {
   color: #FFF;
-  border: 1px solid #FFF;
+  border: 2px solid #FFF;
 }
 
 @media (min-width: 769px) {
@@ -951,7 +952,47 @@ header img {
   background-color: inherit;
 }
 .commentsForm form textarea {
-  border: 1px solid #FF8327;
+  border: 2px solid #FF8327;
+}
+
+aside {
+  background-color: #111010;
+  margin: 9vh 0 0;
+  min-width: 300px;
+  max-width: 600px;
+  padding-top: 20vh;
+}
+aside .wrapper {
+  background-color: #220303;
+  padding: 0 3vw;
+}
+aside .wrapper img {
+  position: relative;
+  left: -20%;
+  top: -3vh;
+}
+aside .wrapper p {
+  margin-bottom: 0;
+}
+aside .wrapper div {
+  margin-bottom: 3vh;
+}
+aside .wrapper ul.posts {
+  padding-bottom: 3vw;
+}
+aside .wrapper ul p::before {
+  content: "●";
+  color: #BF2603;
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1.5em;
+  /* Also needed for space (tweak if needed) */
+  font-size: medium;
+}
+@media (min-width: 769px) {
+  aside .wrapper {
+    width: 15vw;
+  }
 }
 
 footer {
@@ -987,27 +1028,35 @@ footer a {
   width: 80%;
 }
 
+.accent {
+  color: #FF8327;
+}
+
 #mainContent {
+  padding: 0 0 5vh;
+  position: relative;
+}
+
+.blogContent {
   background-color: #111010;
 }
+.blogContent .wrapper {
+  width: 80%;
+}
+
 @media (min-width: 769px) {
-  #mainContent {
+  .blogContent {
+    width: 90vw;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0 8vw 0;
   }
-}
-#mainContent .wrapper {
-  width: 80%;
-}
-#mainContent .accent {
-  color: #FF8327;
 }
