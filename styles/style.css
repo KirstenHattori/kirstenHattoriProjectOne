@@ -577,6 +577,17 @@ header img {
   width: 80%;
 }
 
+.blogHeader {
+  background-image: url(../assets/blog-header-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+}
+.blogHeader .wrapper {
+  width: 80%;
+}
+
 .pagesMenu {
   background-color: #111010;
   padding: 240px 0 100px;
