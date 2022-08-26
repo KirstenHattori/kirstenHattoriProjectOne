@@ -1,0 +1,33 @@
+.comments {
+  .wrapper {
+
+    margin-top: 10vh;
+    h3 {
+      margin-bottom: 3vh;
+    }
+    ul {
+      li.comment:last-of-type {
+        margin: 7vh 0 0;
+      }
+
+      .comment {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+          padding-top: 1vh;
+          height: fit-content;
+          max-width: auto;
+        }
+
+        .txtContainer {
+          max-width: 80%;
+        }
+      }
+    }
+
+    @include devices(laptop) {
+      margin-top: 5vh;
+    }
+  }
+}

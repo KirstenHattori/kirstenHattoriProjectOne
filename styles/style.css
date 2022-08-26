@@ -942,6 +942,39 @@ header img {
   padding-right: 30px;
 }
 
+.comments .wrapper {
+  margin-top: 10vh;
+}
+.comments .wrapper h3 {
+  margin-bottom: 3vh;
+}
+.comments .wrapper ul li.comment:last-of-type {
+  margin: 7vh 0 0;
+}
+.comments .wrapper ul .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.comments .wrapper ul .comment img {
+  padding-top: 1vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: auto;
+}
+.comments .wrapper ul .comment .txtContainer {
+  max-width: 80%;
+}
+@media (min-width: 769px) {
+  .comments .wrapper {
+    margin-top: 5vh;
+  }
+}
+
 .commentsForm form {
   width: 80%;
 }
