@@ -522,6 +522,17 @@ header img {
   }
 }
 
+.contactHeader {
+  background-image: url(../assets/contact-header-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+}
+.contactHeader .wrapper {
+  width: 80%;
+}
+
 .pagesMenu {
   background-color: #111010;
   padding: 240px 0 100px;
@@ -786,4 +797,11 @@ footer p {
 }
 footer a {
   font-family: inherit;
+}
+
+#mainContent {
+  background-color: #111010;
+}
+#mainContent .wrapper {
+  width: 80%;
 }

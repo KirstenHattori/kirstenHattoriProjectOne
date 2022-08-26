@@ -71,3 +71,15 @@ header {
   
   // }
 // }
+
+.contactHeader {
+  background-image: url(../assets/contact-header-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+  // max-height: 50vh;
+  .wrapper {
+    width:80%;
+  }
+}

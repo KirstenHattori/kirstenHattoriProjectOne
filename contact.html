@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
-  <script src="https://use.fontawesome.com/b9260320c7.js"></script>
+  <script src="https://use.fontawesome.com/b9260320c7.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/6f07dba2d2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./styles/style.css">
   <script src="./script.js"></script>
 </head>
@@ -63,9 +64,58 @@
   </nav>
   <!-- /.navMobile -->
 
-  <header class="contactHeader"></header>
+  <header class="contactHeader">
+    <div class="wrapper">
+      <h2>Get in Touch</h2>
+    </div>
+  </header>
   
-  <main id="mainContent"></main>
+  <main id="mainContent">
+    <div class="wrapper">
+      <form action="" method="" class="contactForm" name="contactForm">
+
+        <label for="name" class="sr-only">name</label>
+        <input type="text" id="name" placeholder="Name">
+
+        <label for="email" class="sr-only">email</label>
+        <input type="email" id="email" placeholder="Email">
+
+        <label for="message" class="sr-only">message for me</label>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+
+        <button class="button">Submit</button>
+
+      </form>
+    </div>
+    <!-- /.wrapper -->
+
+    <div class="contactInfo">
+      <div class="wrapper">
+        <ul class="flexContainer">
+          <li>
+            <ul class="socialsIcons">
+              <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+            <!-- /ul.socialsIcons -->
+          </li>
+          <li class="email"><p>info@email.com</p>
+          </li>
+          <li>
+            <ul class="contactDeets">
+              <li><p>123-456-7890</p></li>
+              <li><p>123 Queen Street West, Unit 10</p></li>
+              <li><p>Toronto, Ontario</p></li>
+              <li><p>M5V2D5</p></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
 
   <footer>
     <div class="wrapper">
