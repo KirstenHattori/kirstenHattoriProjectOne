@@ -942,6 +942,34 @@ header img {
   padding-right: 30px;
 }
 
+article {
+  padding-left: 1vw;
+  border: 0;
+  border-bottom: 5px solid #FF8327;
+  background-color: inherit;
+  border-left: 3px solid #FF8327;
+}
+article img {
+  -webkit-box-shadow: -2vw 2vw 1px #FF8327;
+          box-shadow: -2vw 2vw 1px #FF8327;
+  min-width: 100%;
+  height: auto;
+  position: relative;
+  top: -10vw;
+}
+article .txtContainer {
+  padding: 5vh 0;
+}
+@media (min-width: 769px) {
+  article {
+    padding-left: 1.7vw;
+    border: 0;
+    border-bottom: 5px solid #FF8327;
+    background-color: inherit;
+    border-left: 5px solid #FF8327;
+  }
+}
+
 .comments .wrapper {
   margin-top: 10vh;
 }
