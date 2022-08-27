@@ -1,20 +1,19 @@
 article {
   // margin-left: 3vw;
 
-  padding-left: 1vw;
   @include inputsAndTextareas(5, $tertiary);
   border-left: 3px solid $tertiary;
   
   img {
     box-shadow: -2vw 2vw 1px $tertiary;
-    min-width: 100%;
-    height: auto;
+    // min-width: 100%;
+    // height: auto;
     position: relative;
     top: -10vw;
   }
 
   .blogTxtContainer {
-    padding: 5vh 0;
+    padding: 0 0 5vh;
   }
 
   @include devices(laptop) {

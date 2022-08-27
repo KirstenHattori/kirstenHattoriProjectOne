@@ -2,25 +2,31 @@
   color: $tertiary;
 }
 
-.blogContent {
-  padding: 0 0 5vh;
-  position: relative;
+.blogSection {
   background-color: $quaternary;
+  width: 100vw;
 
-  .wrapper {
-    width: 80%;
+  .blogContent {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 5vh;
+    position: relative;
+    // width: 70%;
+    
+    .wrapper {
+      width: 80%;
+    }
   }
-  
+    
 }
 
 @include devices(laptop) {
 
   .blogContent {
-    width: 90vw;
+    width: 75vw;
     position: relative;
     // left: 20%;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     justify-content: space-between;
   }
 }

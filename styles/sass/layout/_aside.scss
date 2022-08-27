@@ -1,18 +1,23 @@
 aside {
   background-color: $quaternary;
-  margin: 9vh 0 0;
+  // margin: 9vh 0 0;
   min-width: 300px;
-  max-width: 600px;
   padding-top: 20vh;
-  .wrapper {
+  display: flex;
+  & .wrapper {
+    margin-bottom: 10vh;
     background-color: $quinary;
     padding: 0 3vw;
     
-    img {
-      position: relative;  
-      left: -20%;
-      top: -3vh;
-    }
+    // .imgPositionContainer {
+      .asideImg {
+        position: relative;  
+        left: -10%;
+        top: -3vh;
+        max-width: 100%;
+        height: auto;
+      }
+    // }
 
     p {
       margin-bottom: 0;
@@ -39,10 +44,18 @@ aside {
     }
   }
 
-  @include devices(laptop) {
-    .wrapper {
-      width: 15vw;
+  @include devices(tablet) {
+    // width: 20vw;
+  max-width: 600px;
 
+    .wrapper {
+      width: 90%;
+      padding: 0 1vw;
+    }
+
+    // .asideImg {
+    //   width: auto;
+    // }
     // .imgPositionContainer {
     //   height: 305px;
     //   img {
@@ -51,6 +64,5 @@ aside {
     //     top: 10vh;
     //   }
     // }
-    }
   }
 }

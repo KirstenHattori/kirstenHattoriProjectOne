@@ -943,7 +943,6 @@ header img {
 }
 
 article {
-  padding-left: 1vw;
   border: 0;
   border-bottom: 5px solid #FF8327;
   background-color: inherit;
@@ -952,13 +951,11 @@ article {
 article img {
   -webkit-box-shadow: -2vw 2vw 1px #FF8327;
           box-shadow: -2vw 2vw 1px #FF8327;
-  min-width: 100%;
-  height: auto;
   position: relative;
   top: -10vw;
 }
 article .blogTxtContainer {
-  padding: 5vh 0;
+  padding: 0 0 5vh;
 }
 @media (min-width: 769px) {
   article {
@@ -1027,19 +1024,23 @@ article .blogTxtContainer {
 
 aside {
   background-color: #111010;
-  margin: 9vh 0 0;
   min-width: 300px;
-  max-width: 600px;
   padding-top: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 aside .wrapper {
+  margin-bottom: 10vh;
   background-color: #220303;
   padding: 0 3vw;
 }
-aside .wrapper img {
+aside .wrapper .asideImg {
   position: relative;
-  left: -20%;
+  left: -10%;
   top: -3vh;
+  max-width: 100%;
+  height: auto;
 }
 aside .wrapper p {
   margin-bottom: 0;
@@ -1059,9 +1060,13 @@ aside .wrapper ul p::before {
   /* Also needed for space (tweak if needed) */
   font-size: medium;
 }
-@media (min-width: 769px) {
+@media (min-width: 481px) {
+  aside {
+    max-width: 600px;
+  }
   aside .wrapper {
-    width: 15vw;
+    width: 90%;
+    padding: 0 1vw;
   }
 }
 
@@ -1102,26 +1107,33 @@ footer a {
   color: #FF8327;
 }
 
-.blogContent {
+.blogSection {
+  background-color: #111010;
+  width: 100vw;
+}
+.blogSection .blogContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0 0 5vh;
   position: relative;
-  background-color: #111010;
 }
-.blogContent .wrapper {
+.blogSection .blogContent .wrapper {
   width: 80%;
 }
 
 @media (min-width: 769px) {
   .blogContent {
-    width: 90vw;
+    width: 75vw;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
