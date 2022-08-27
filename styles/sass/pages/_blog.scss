@@ -2,11 +2,9 @@
   color: $tertiary;
 }
 
-#mainContent {
+.blogContent {
   padding: 0 0 5vh;
   position: relative;
-}
-.blogContent {
   background-color: $quaternary;
 
   .wrapper {
@@ -26,9 +24,3 @@
     justify-content: space-between;
   }
 }
-
-// .txtContainer {
-//   display: flex;
-//   flex-wrap: wrap;
-//   padding: 0 auto;
-// }

@@ -957,7 +957,7 @@ article img {
   position: relative;
   top: -10vw;
 }
-article .txtContainer {
+article .blogTxtContainer {
   padding: 5vh 0;
 }
 @media (min-width: 769px) {
@@ -1002,7 +1002,7 @@ article .txtContainer {
     height: fit-content;
     max-width: auto;
   }
-  .comments .wrapper ul .comment .txtContainer {
+  .comments .wrapper ul .comment .commentTxtContainer {
     max-width: 80%;
   }
 }
@@ -1102,12 +1102,9 @@ footer a {
   color: #FF8327;
 }
 
-#mainContent {
+.blogContent {
   padding: 0 0 5vh;
   position: relative;
-}
-
-.blogContent {
   background-color: #111010;
 }
 .blogContent .wrapper {
