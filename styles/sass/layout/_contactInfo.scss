@@ -1,7 +1,5 @@
 .contactInfo {
-  @include devices(laptop){
-    padding-top: 20vh;
-  }
+  
 
   p{
     margin: 0;
@@ -16,5 +14,19 @@
     a {
       padding-right: 30px;
     }
+  }
+
+  @include devices(tablet) {
+    .wrapper {
+      width: 80%;
+    }
+  }
+
+  @include devices(laptop) {
+    padding-top: 20vh;
+
+    .wrapper {
+        width: 100%;
+      }
   }
 }

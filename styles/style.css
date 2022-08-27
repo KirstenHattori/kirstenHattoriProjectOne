@@ -900,7 +900,8 @@ header img {
 }
 
 .contactForm form {
-  width: 80%;
+  margin: 0 auto;
+  width: 85%;
   position: relative;
   top: -15vh;
   right: -3vw;
@@ -920,12 +921,19 @@ header img {
   color: #FFF;
   border: 2px solid #FFF;
 }
-
 @media (min-width: 769px) {
-  .contactInfo {
-    padding-top: 20vh;
+  .contactForm form {
+    width: 100%;
+    -webkit-box-shadow: 1.3vw 1.3vw 1px #FF8327;
+            box-shadow: 1.3vw 1.3vw 1px #FF8327;
   }
 }
+@media (min-width: 769px) {
+  .contactForm form {
+    right: -5vw;
+  }
+}
+
 .contactInfo p {
   margin: 0;
 }
@@ -940,6 +948,19 @@ header img {
 }
 .contactInfo .socialsIcons a {
   padding-right: 30px;
+}
+@media (min-width: 481px) {
+  .contactInfo .wrapper {
+    width: 80%;
+  }
+}
+@media (min-width: 769px) {
+  .contactInfo {
+    padding-top: 20vh;
+  }
+  .contactInfo .wrapper {
+    width: 100%;
+  }
 }
 
 article {
@@ -1117,7 +1138,7 @@ footer a {
   padding: 0 0 10vh;
 }
 @media (min-width: 769px) {
-  .contactSection {
+  .contactSection .contactFlexWrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1128,11 +1149,14 @@ footer a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0 8vw 0;
+    width: 80%;
+    margin: 0 auto;
   }
 }
-.contactSection .wrapper {
-  width: 80%;
+@media (min-width: 769px) {
+  .contactSection {
+    padding-bottom: 1vh;
+  }
 }
 
 .accent {

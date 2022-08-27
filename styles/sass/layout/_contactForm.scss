@@ -2,7 +2,8 @@
   // position: relative;
   // width: 90%;
   form {
-    width: 80%;
+    margin: 0 auto;
+    width: 85%;
     position: relative;
     top: -15vh;
     right: -3vw;
@@ -23,6 +24,15 @@
     textarea {
       color: $primary;
       border: 2px solid $primary;
+    }
+    
+    @include devices(laptop) {
+      width: 100%;
+      box-shadow: 1.3vw 1.3vw 1px $tertiary;
+    }
+
+    @include devices(laptop) {
+      right: -5vw;
     }
   }
 
