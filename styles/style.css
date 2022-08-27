@@ -1075,12 +1075,12 @@ footer a {
   font-family: inherit;
 }
 
-#mainContent {
+.contactSection {
   background-color: #111010;
   padding: 0 0 10vh;
 }
 @media (min-width: 769px) {
-  #mainContent {
+  .contactSection {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1094,7 +1094,7 @@ footer a {
     padding: 0 8vw 0;
   }
 }
-#mainContent .wrapper {
+.contactSection .wrapper {
   width: 80%;
 }
 
