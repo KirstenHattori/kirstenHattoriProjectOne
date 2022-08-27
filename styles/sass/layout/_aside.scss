@@ -29,9 +29,6 @@ aside {
 
     ul.posts {
       padding-bottom: 3vw;
-      // li {
-      //   color: $primary;
-      // }
     }
     ul p::before {
       content: '\25CF';
@@ -46,7 +43,7 @@ aside {
 
   @include devices(tablet) {
     // width: 20vw;
-  max-width: 600px;
+    max-width: 600px;
 
     .wrapper {
       width: 90%;
@@ -56,17 +53,47 @@ aside {
         left: -13%;
       }
     }
-
-    // .asideImg {
-    //   width: auto;
-    // }
-    // .imgPositionContainer {
-    //   height: 305px;
-    //   img {
-    //     position: absolute;
-    //     left: 0;
-    //     top: 10vh;
-    //   }
-    // }
   }
+
+  @include devices(laptop) {
+    width: 30%;
+
+    .wrapper {
+      width: 90%;
+      padding: 0 2vw;
+      height: fit-content;
+      margin-left:60px;
+  
+      .asideImg {
+        min-width: 120%;
+        left: -30%;
+      }
+    }
+  }
+
+  @include devices(desktop) {
+    width: 25%;
+    .wrapper {
+      padding: 0 1vw;
+
+      .asideImg {
+        min-width: 100%;
+        left: -22%;
+      }
+    }
+  }
+
+
 }
+
+ // .asideImg {
+ //   width: auto;
+ // }
+ // .imgPositionContainer {
+ //   height: 305px;
+ //   img {
+ //     position: absolute;
+ //     left: 0;
+ //     top: 10vh;
+ //   }
+ // }

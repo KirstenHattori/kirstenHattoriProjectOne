@@ -1072,6 +1072,35 @@ aside .wrapper ul p::before {
     left: -13%;
   }
 }
+@media (min-width: 769px) {
+  aside {
+    width: 30%;
+  }
+  aside .wrapper {
+    width: 90%;
+    padding: 0 2vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-left: 60px;
+  }
+  aside .wrapper .asideImg {
+    min-width: 120%;
+    left: -30%;
+  }
+}
+@media (min-width: 1025px) {
+  aside {
+    width: 25%;
+  }
+  aside .wrapper {
+    padding: 0 1vw;
+  }
+  aside .wrapper .asideImg {
+    min-width: 100%;
+    left: -22%;
+  }
+}
 
 footer {
   text-align: center;
@@ -1112,7 +1141,6 @@ footer a {
 
 .blogSection {
   background-color: #111010;
-  width: 100vw;
 }
 .blogSection .blogContent {
   display: -webkit-box;
@@ -1130,9 +1158,10 @@ footer a {
 }
 
 @media (min-width: 769px) {
-  .blogContent {
-    width: 75vw;
-    position: relative;
+  .blogSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -1140,5 +1169,8 @@ footer a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .blogSection .blogContent {
+    width: 60%;
   }
 }

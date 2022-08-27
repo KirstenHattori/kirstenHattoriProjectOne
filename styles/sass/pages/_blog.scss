@@ -4,7 +4,8 @@
 
 .blogSection {
   background-color: $quaternary;
-  width: 100vw;
+  // width: 100vw;
+  
 
   .blogContent {
     display: flex;
@@ -22,11 +23,13 @@
 
 @include devices(laptop) {
 
-  .blogContent {
-    width: 75vw;
-    position: relative;
-    // left: 20%;
+  .blogSection {
+    display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+
+    .blogContent {
+      width: 60%;
+    }
   }
 }
