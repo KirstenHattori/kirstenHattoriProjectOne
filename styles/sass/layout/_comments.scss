@@ -12,16 +12,24 @@
 
       .comment {
         display: flex;
-        justify-content: space-between;
-
-        img {
-          padding-top: 1vh;
-          height: fit-content;
-          max-width: auto;
+        flex-wrap: wrap;
+        
+        img{
+          margin-bottom: 3vh;
         }
 
-        .txtContainer {
-          max-width: 80%;
+        @include devices(tablet) {
+          justify-content: space-between;
+          
+          img {
+            padding-top: 1vh;
+            height: fit-content;
+            max-width: auto;
+          }
+          
+          .txtContainer {
+            max-width: 80%;
+          }
         }
       }
     }

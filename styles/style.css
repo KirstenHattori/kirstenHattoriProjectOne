@@ -983,19 +983,28 @@ article .txtContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .comments .wrapper ul .comment img {
-  padding-top: 1vh;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  max-width: auto;
+  margin-bottom: 3vh;
 }
-.comments .wrapper ul .comment .txtContainer {
-  max-width: 80%;
+@media (min-width: 481px) {
+  .comments .wrapper ul .comment {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .comments .wrapper ul .comment img {
+    padding-top: 1vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: auto;
+  }
+  .comments .wrapper ul .comment .txtContainer {
+    max-width: 80%;
+  }
 }
 @media (min-width: 769px) {
   .comments .wrapper {
