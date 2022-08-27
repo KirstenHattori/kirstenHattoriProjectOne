@@ -1066,7 +1066,10 @@ aside .wrapper ul p::before {
   }
   aside .wrapper {
     width: 90%;
-    padding: 0 1vw;
+    padding: 0 4vw;
+  }
+  aside .wrapper .asideImg {
+    left: -13%;
   }
 }
 
