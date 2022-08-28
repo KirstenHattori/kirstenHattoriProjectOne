@@ -82,6 +82,12 @@ header {
   .wrapper {
     width:80%;
   }
+
+  // @include devices(desktop) {
+  //   .wrapper {
+  //     width: 75%;
+  //   }
+  // }
 }
 
 .blogHeader {

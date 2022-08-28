@@ -3,9 +3,9 @@
   padding: 0 0 10vh;
   // margin: 0 10%;
   
-  .contactFlexWrapper {
-
-    @include devices(laptop) {
+  
+  @include devices(laptop) {
+    .contactFlexWrapper {
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
@@ -14,9 +14,13 @@
       width: 80%;
       margin: 0 auto;
     }
-  }
     
-  @include devices(laptop) {
     padding-bottom: 1vh;
+  } 
+
+  @include devices(desktop) {
+    .contactFlexWrapper {
+      width: 75%;
+    }
   }
 }
