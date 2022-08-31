@@ -34,13 +34,9 @@
     }
 
     @include devices(tablet) {
-
       .menuItem {
         width: 48%;
       }
-      
-      
-      
     }
   }
 }

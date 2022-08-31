@@ -1,18 +1,3 @@
-// @font-face {
-//   font-family: 'Tulpen', cursive;
-//   src: url('https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap');
-//   font-weight: normal;
-// }
-
-// @font-face {
-//   font-family: 'Chathura', sans-serif;
-//   src: url('https://fonts.googleapis.com/css2?family=Chathura&display=swap');
-//   font-weight: normal;
-// }
-
-
-// ~~~
-
 html {
   font-size: 125%;
   font-family: $secondaryFont;
@@ -24,8 +9,6 @@ h1 {
   font-family: $primaryFont;
   color: $tertiary;
   @include headingsDefault(261.4, 261.4, 2.4);
-  // letter-spacing: 2.4px;
-  // text-align: center;
   margin: 0;
 }
 
@@ -68,7 +51,6 @@ a {
   display: inline-block;
   transition: 0.3s;
 
-  // testing that mixnis, variables, and typography are working
   color: $primary;
   font-family: $primaryFont;
   

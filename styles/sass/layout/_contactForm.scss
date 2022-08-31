@@ -1,6 +1,4 @@
 .contactForm {
-  // position: relative;
-  // width: 90%;
   form {
     margin: 0 auto;
     width: 85%;
@@ -11,10 +9,6 @@
     padding: 3vh 5vw 4vh;
     background-color: $quinary;
     color: $primary;
-
-    // @include devices(tablet){
-    //   box-shadow: 5px 5px 1px $tertiary;
-    // }
 
     input,
     textarea {

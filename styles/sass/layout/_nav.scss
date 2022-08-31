@@ -4,14 +4,11 @@
 
   @include devices(tablet){
     visibility: visible;
-    // ~~~ add a sticky navBar with JS
-    // https: //www.w3schools.com/howto/howto_js_navbar_sticky.asp
     position: sticky;
     top: 0;
     z-index: 15;
     background-color: $quaternary;
     width: 100%;
-    // left: 20%;
 
     ul {
       margin: 0 auto;
@@ -24,7 +21,6 @@
 }
 
 .navMobile {
-
   @include devices(tablet){
     visibility: hidden;
     position: absolute;
@@ -34,38 +30,37 @@
     display: flex;
     justify-content: space-between;
   }
-
 }
 
-  .slideOut {
-    background: $quaternary;
-    min-height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    right: -1000px;
-    transition: 0.5s;
-    z-index: 20;
+.slideOut {
+  background: $quaternary;
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: -1000px;
+  transition: 0.5s;
+  z-index: 20;
 
-    li {
-      a {
-        padding: 9px 0;
-      }
-    }
-
-    &.open {
-      right: 0;
-    }
-
-    & a {
-      width: 100%;
-      transition: 300ms;
-    }
-
-    & a:hover,
-    & a:focus {
-      background: $quaternary;
+  li {
+    a {
+      padding: 9px 0;
     }
   }
+
+  &.open {
+    right: 0;
+  }
+
+  & a {
+    width: 100%;
+    transition: 300ms;
+  }
+
+  & a:hover,
+  & a:focus {
+    background: $quaternary;
+  }
+}
 
 

@@ -1,6 +1,5 @@
 aside {
   background-color: $quaternary;
-  // margin: 9vh 0 0;
   min-width: 300px;
   padding-top: 20vh;
   display: flex;
@@ -9,15 +8,13 @@ aside {
     background-color: $quinary;
     padding: 0 3vw;
     
-    // .imgPositionContainer {
-      .asideImg {
-        position: relative;  
-        left: -10%;
-        top: -3vh;
-        max-width: 100%;
-        height: auto;
-      }
-    // }
+    .asideImg {
+      position: relative;  
+      left: -10%;
+      top: -3vh;
+      max-width: 100%;
+      height: auto;
+    }
 
     p {
       margin-bottom: 0;
@@ -34,15 +31,12 @@ aside {
       content: '\25CF';
         color: $secondary;
         display: inline-block;
-        /* Needed to add space between the bullet and the text */
         width: 1.5em;
-        /* Also needed for space (tweak if needed) */
         font-size: medium;
     }
   }
 
   @include devices(tablet) {
-    // width: 20vw;
     max-width: 600px;
 
     .wrapper {
@@ -82,18 +76,4 @@ aside {
       }
     }
   }
-
-
 }
-
- // .asideImg {
- //   width: auto;
- // }
- // .imgPositionContainer {
- //   height: 305px;
- //   img {
- //     position: absolute;
- //     left: 0;
- //     top: 10vh;
- //   }
- // }

@@ -9,11 +9,6 @@
     li {
       margin: 10px auto;
     }
-
-    // trying to get the img to take up the whole width of the wrapper:
-    // img {
-    //   min-width: 100%;
-    // }
   }
 
   @include devices(tablet) {

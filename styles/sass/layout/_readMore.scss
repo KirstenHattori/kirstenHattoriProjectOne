@@ -1,8 +1,5 @@
 .readMore {
   background-color: $quinary;
-  // display: flex;
-  // justify-content: space-between;
-  // flex-wrap: wrap;
   padding: 50px 0;
 
   .flexContainer {
@@ -47,7 +44,6 @@
 
     @include devices(tablet) {
       .txtContainer {
-        // width: 40%;
         padding-left: 2vw;
       }
 
@@ -58,7 +54,6 @@
 
       img {
         min-width: 450px;
-        // width: 40%;
         height: auto;
       }
 

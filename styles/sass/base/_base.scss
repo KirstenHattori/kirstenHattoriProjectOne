@@ -122,9 +122,8 @@ a.button {
 
   &:hover,
   &:focus {
-    // checking this accessibility function is working
     background-color: $primary;
-    color: $secondary; //.accessibility
+    color: $secondary;
   }
 }
 

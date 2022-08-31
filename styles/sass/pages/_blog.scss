@@ -3,26 +3,21 @@
 }
 
 .blogSection {
-  background-color: $quaternary;
-  // width: 100vw;
-  
+  background-color: $quaternary;  
 
   .blogContent {
     display: flex;
     flex-direction: column;
     padding: 0 0 5vh;
     position: relative;
-    // width: 70%;
     
     .wrapper {
       width: 80%;
     }
   }
-    
 }
 
 @include devices(laptop) {
-
   .blogSection {
     display: flex;
     flex-direction: row-reverse;

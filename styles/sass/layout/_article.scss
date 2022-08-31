@@ -1,13 +1,9 @@
 article {
-  // margin-left: 3vw;
-
   @include inputsAndTextareas(5, $tertiary);
   border-left: 3px solid $tertiary;
   
   img {
     box-shadow: -2vw 2vw 1px $tertiary;
-    // min-width: 100%;
-    // height: auto;
     position: relative;
     top: -10vw;
   }
