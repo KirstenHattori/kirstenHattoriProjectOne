@@ -355,6 +355,10 @@ a.button {
   text-transform: capitalize;
 }
 
+.thisPage {
+  color: #FF8327;
+}
+
 .skipLink {
   background-color: white;
   color: black;
@@ -509,7 +513,7 @@ button.openMenu, button.closeMenu {
   visibility: hidden;
   position: absolute;
 }
-@media (min-width: 481px) {
+@media (min-width: 769px) {
   .navBar {
     visibility: visible;
     position: sticky;
@@ -533,7 +537,7 @@ button.openMenu, button.closeMenu {
   }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 769px) {
   .navMobile {
     visibility: hidden;
     position: absolute;
@@ -756,10 +760,6 @@ header img {
   .readMore .flexContainer .lastTxtContainer {
     padding-right: 2vw;
     padding-left: 0px;
-  }
-  .readMore .flexContainer img {
-    min-width: 450px;
-    height: auto;
   }
   .readMore .flexContainer .firstImg {
     -webkit-box-shadow: 15px 15px 1px #FF8327;
@@ -1076,9 +1076,7 @@ aside .wrapper ul p::before {
   content: "●";
   color: #BF2603;
   display: inline-block;
-  /* Needed to add space between the bullet and the text */
   width: 1.5em;
-  /* Also needed for space (tweak if needed) */
   font-size: medium;
 }
 @media (min-width: 481px) {

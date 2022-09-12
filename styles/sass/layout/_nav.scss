@@ -2,7 +2,7 @@
   visibility: hidden;
   position: absolute;
 
-  @include devices(tablet){
+  @include devices(laptop){
     visibility: visible;
     position: sticky;
     top: 0;
@@ -21,7 +21,7 @@
 }
 
 .navMobile {
-  @include devices(tablet){
+  @include devices(laptop){
     visibility: hidden;
     position: absolute;
   }
