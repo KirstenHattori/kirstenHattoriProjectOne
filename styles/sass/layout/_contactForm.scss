@@ -13,6 +13,7 @@
     input,
     textarea {
       @include inputsAndTextareas(2, $primary);
+      caret-color: $tertiary;
     }
     
     textarea {

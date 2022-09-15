@@ -9,7 +9,6 @@
   top: 0;
   z-index: 999;
 
-  // because using sass, can nest it
   &:focus {
     left: 0;
     right: 0;
@@ -20,7 +19,6 @@
 // BASE STYLES
 html {
   background-color: rgba($color: $quaternary, $alpha: 0.9);
-  // rgba($color: $quaternary, $alpha: 1);
 }
 
 body {

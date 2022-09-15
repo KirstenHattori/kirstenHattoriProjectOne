@@ -916,6 +916,7 @@ header img {
   border: 0;
   border-bottom: 2px solid #FFF;
   background-color: inherit;
+  caret-color: #FF8327;
 }
 .contactForm form textarea {
   color: #FFF;
@@ -1038,6 +1039,7 @@ article .blogTxtContainer {
   border: 0;
   border-bottom: 2px solid #FF8327;
   background-color: inherit;
+  caret-color: #BF2603;
 }
 .commentsForm form textarea {
   border: 2px solid #FF8327;

@@ -5,6 +5,7 @@
     input,
     textarea {
       @include inputsAndTextareas(2, $tertiary);
+      caret-color: $secondary;
     }
     
     textarea {
