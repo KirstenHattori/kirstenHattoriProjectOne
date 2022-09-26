@@ -7,7 +7,6 @@
   <title>Blog</title>
   <script src="https://use.fontawesome.com/b9260320c7.js"></script>
   <link rel="stylesheet" href="./styles/style.css">
-  <script src="./script.js"></script>
 </head>
 <body>
   <a href="#mainContent" class="skipLink">Skip to the main content.</a>
@@ -107,11 +106,14 @@
 
       <section class="commentsForm">
         <!-- <div class="wrapper"> -->
-        <form action="https://formspree.io/f/xwkzlbzd" method="POST" class="form" name="form">
+        <form action="" method="" class="form commentForm"  name="form">
+
+          <!-- for an active form: -->
+        <!-- <form action="https://formspree.io/f/xwkzlbzd" method="POST" class="form" name="form"> -->
       
           <div class="formTopLine">
             <label for="name" class="sr-only">name</label>
-            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="name" placeholder="Name" required>
       
             <label for="email" class="sr-only">email address</label>
             <input type="email" id="email" placeholder="Email address">
@@ -119,7 +121,7 @@
           <!-- /.formTopLine -->
       
           <label for="comment" class="sr-only">comment</label>
-          <textarea name="comment" id="comment" rows="8" placeholder="Comment"></textarea>
+          <textarea name="comment" id="comment" rows="8" placeholder="Comment" required></textarea>
       
           <button class="button">Post Comment</button>
       
@@ -171,5 +173,7 @@
       <p>Copyright © 2019 <a href="https://junocollege.com/">HackerYou</a></p>
     </div><!-- /.wrapper -->
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
