@@ -15,9 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // BLOG FORM
 
-// ***DOING RIGHT MEOW! 
-  //=== defining the variables outside of the date() method and as properties of the blog {}
-
 // // creating namespace
 const blog = {};
 
@@ -25,7 +22,7 @@ const blog = {};
   // target the form element and save as a variable so it is easier to use later 
     // need to target by classname because there multiple forms on the pages that use this script file. 
 const form = document.querySelector('form');
-const forms = document.querySelectorAll('form');
+// const forms = document.querySelectorAll('form');
 
 //   // attach event listener to the form
   // create a function to be called when the form is submitted
@@ -37,31 +34,49 @@ function preventDefault(event) {
 
 // target the user inputs from the form and capturing their value in a variable
 const inputs = document.querySelectorAll('input');
-const commenterName = inputs[0].value;
-const comment = document.querySelector('textarea').value;
+const commentersName = inputs[0].value;
+const commentersComment = document.querySelector('textarea').value;
+
+// save user inputs in an object
+const userSubmission = {};
+userSubmission.name = inputs[0].value;
+userSubmission.comment = document.querySelector('textarea').value;
+userSubmission.date = blog.date;
+
 
 // target the html elements to create new comment li's
+const commentsList = document.getElementsByClassName('commentsList');
+const commentItem = document.createElement('li');
+// accessing the className and modifying it
+commentItem.className = 'comment';
+// console.log(commentItem);
+const commentTxtContainer = document.createElement('div');
 
 
 
 // function for updating textContent of html of li's in comment section
   // to be called on submit
+  // .append() ?
+function createComment(commentersName, commentersComment){
+  commentItem.textContent = `${commentersName} says ${commentersComment}`
+  commentItem.innerHTML = 
+  `<div class="commentTxtContainer">
+    <h4 class="accent">Wednesday October 10th, 2019 by ${commentersName} </h4>
+    <p>${commentersComment}</p>
+  </div>`
+  console.log('hey');
+}
+commentsList.append(createComment());
 
-
-
-
-
+// // ***DOING RIGHT MEOW! 
+/* ~~~get commentersName and commentersComment on the page in the same styling as the static comments*/
 
 
 // when there is just one function to callback
   //  // addeventlistener to form and call the prevent default method 
   // form.addEventListener('submit', preventDefault);
 
-// calling a bunch of outside declared functions
-form.addEventListener('submit', function(event){
-  preventDefault(event);
 
-})
 
 // form.addEventListener('submit', function(event){
 //   event.preventDefault();
@@ -70,19 +85,21 @@ form.addEventListener('submit', function(event){
 //   console.log('hi');
 
 // });
-  
+
 // tracking user inputs of name and comment 
   // // name input:
   // blog.form.name = document.querySelector('input[]:')
 
+
+//=== defining the variables outside of the date() method and as properties of the blog {} ???
+// should this be declared inside the date method?
+const date = Date();
+blog.date = function (date) {
+  // call Date() to get the datestamp of user submission
+  // Date();
+  // on submit, date() is called and the return is saved as dateString
   
-    // should this be declared inside the date method?
-  blog.date = function () {
-    // call Date() to get the datestamp of user submission
-    // Date();
-    // on submit, date() is called and the return is saved as dateString
-    blog.dateString = Date();
-    
+  blog.dateString = Date();
     // turn the string into an array so can access individual values and use them to populate the page ( ${}-style )
     blog.dateArray = [];
     blog.dateArray = blog.dateString.split(' ');
@@ -102,3 +119,12 @@ form.addEventListener('submit', function(event){
 //   
 // 
 
+/* when dynamically populating the form list with data from formspree, will need to:
+  create objects for each comment with the properties of name, email, comment that dynamically populates an updated html that is a shell of the markup. so that i can keep the styling that is already done
+*/
+// calling a bunch of outside declared functions
+form.addEventListener('submit', function (event) {
+  preventDefault(event);
+  createComment();
+  date;
+});
