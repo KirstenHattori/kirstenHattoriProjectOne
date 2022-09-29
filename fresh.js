@@ -44,10 +44,9 @@ the form resets on successful submit
 // first draft > was restarted this is the scrap work
 
 
-// BLOG FORM
 
 // // creating namespace
-const blog = {};
+// const blog = {};
 
 // event listening and handling of the form:
 // target the form element and save as a variable so it is easier to use later 

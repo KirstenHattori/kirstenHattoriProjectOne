@@ -13,3 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 })
 
+
+// BLOG FORM
+
+// listen for certain user inputs
+  // text
+  // email
+  // textarea
+//will be getting the value from the inputs
+// from values, be able to change the innerHtml
+
+
