@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // event listening and handling of the form:
 // target the form element and save as a variable so it is easier to use later 
 // need to target by classname because there multiple forms on the pages that use this script file. 
-const commentsForm = document.getElementById('commentForm');
+const commentForm = document.getElementById('commentForm');
 // const forms = document.querySelectorAll('form');
 
 //   // attach event listener to the form
@@ -113,7 +113,7 @@ function createComment(commentersName, commentersComment) {
   create objects for each comment with the properties of name, email, comment that dynamically populates an updated html that is a shell of the markup. so that i can keep the styling that is already done
 */
 // calling a bunch of outside declared functions
-commentsForm.addEventListener('submit', function (event) {
+commentForm.addEventListener('submit', function (event) {
   preventDefault(event);
   createComment();
   date();
