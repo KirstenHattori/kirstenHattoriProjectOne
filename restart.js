@@ -13,7 +13,8 @@ commentForm.addEventListener('submit', function(event){
   preventDefault(event);
   updateUserSubmission();
   formDate();
-  // createComment(userSubmission.date, userSubmission.name, userSubmission.comment);
+  createComment(userSubmission.date, userSubmission.name, userSubmission.comment);
+
 });
     // prevent default form submit behaviour
 function preventDefault(event) {
@@ -110,8 +111,9 @@ function formDate() {
   userSubmission.date = `${dayOfWeek} ${month} ${dayOfMonth}, ${year}`
 }
 
-
-
+// function for displaying userSubmission data on page
+function createComment(inputDate, inputName, inputComment) {
+  
 // target the ul.commentsList 
 const ulElement = document.querySelector('.commentsList');
 console.log(ulElement);
@@ -120,32 +122,39 @@ console.log(ulElement);
   // create an li element
 const liElement = document.createElement('li');
   // update the className
-listItem.className = 'comment'
+liElement.className = 'comment';
 
 // create a div.commentTxtContainer
   // create a div element
+const divElement = document.createElement('div');
   // update the className
-
+divElement.className = 'commentTxtContainer';
 
 // create a h4.accent 
   // create an h4 element
+const h4Element = document.createElement('h4');
   // update the className
+h4Element.className = 'accent';
   // update the textContent with 'userSubmissions.date by userSubmission.name'
+h4Element.textContent = inputDate + ' by ' + inputName;
 
 // create a p 
   // create a p element
+const pElement = document.createElement('p');
   // update the textContent with userSubmissions.comment
-
-// insert p into div.commentTxtContainer
-
+pElement.textContent = inputComment
 
 // insert h4.accent into div.commentTxtContainer
+divElement.appendChild(h4Element);
 
+// insert p into div.commentTxtContainer
+divElement.appendChild(pElement);
 
 // insert div.commentTxtContainer into li.comment
-
+liElement.appendChild(divElement);
 
 // insert liElement(li.comment) into ulElement(ul.commentsList)
 ulElement.appendChild(liElement);
+}
 
 
