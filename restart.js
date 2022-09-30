@@ -40,8 +40,70 @@ function formDate() {
   // conditional of an if (dayOfWeek = Sun) {dayOfWeek = Sunday} else if (dayOfWeek = Mon){dayOfWeek = Monday} etc
   // extract that out to a fucntion that accepts dayOfWeek as an argument
   dayOfWeek = dateArray[0];
+// converting Date() returned values to match format of the design = full words
+  function fullDayOfWeek(day){
+    if (day == 'Mon') {
+      dayOfWeek = 'Monday';
+    } else if (day == 'Tue') {
+      dayOfWeek = 'Tuesday';
+    } else if (day == 'Wed') {
+      dayOfWeek = 'Wednesday';
+    } else if (day == 'Thu') {
+      dayOfWeek = 'Thursday';
+    } else if (day == 'Fri') {
+      dayOfWeek = 'Friday';
+    } else if (day == 'Sat') {
+      dayOfWeek = 'Saturday';
+    } else if (day == 'Sun') {
+      dayOfWeek = 'Sunday';
+    }
+  }
+  fullDayOfWeek(dayOfWeek);
+
   month = dateArray[1];
+// converting Date() returned values to match format of the design = full words
+  function fullMonth(monthFromDate) {
+    if (monthFromDate == 'Jan') {
+      month = 'January';
+    } else if (monthFromDate == 'Feb') {
+      month = 'Febuary';
+    } else if (monthFromDate == 'Mar') {
+      month = 'March';
+    } else if (monthFromDate == 'Apr') {
+      month = 'April';
+    } else if (monthFromDate == 'Jun') {
+      month = 'June';
+    } else if (monthFromDate == 'Jul') {
+      month = 'July';
+    } else if (monthFromDate == 'Aug') {
+      month = 'August';
+    } else if (monthFromDate == 'Sep') {
+      month = 'September';
+    } else if (monthFromDate == 'Oct') {
+      month = 'October';
+    } else if (monthFromDate == 'Nov') {
+      month = 'November';
+    } else if (monthFromDate == 'Dec') {
+      month = 'December';
+    } 
+  }
+  fullMonth(month);
+
   dayOfMonth = dateArray[2];
+  function dayOfMonthSuffixed(num) {
+    if (num === 1||num===21||num===31){
+      dayOfMonth=num+'st';
+    } else if (num===2||num===22){
+      dayOfMonth=num+'nd';
+    } else if (num===3||num===23){
+      dayOfMonth=num+'rd';
+    } else {
+      dayOfMonth=num+'th';
+    }
+  }
+  dayOfMonthSuffixed(dayOfMonth);
+  console.log(dayOfMonth);
+
   year = dateArray[3];
   userSubmission.date = `${dayOfWeek} ${month} ${dayOfMonth}, ${year}`
 }

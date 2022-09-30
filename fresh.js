@@ -9,6 +9,46 @@ else if ends in 1, add 'st';
 else if ends in 2, add 'nd';
 else if ends in 3, add 'rd';
 
+more error proof if done for possible numbers in a month (1-31)
+
+1st
+21st
+31st
+
+2nd
+22nd
+
+3rd
+23rd
+
+don't need to type out condition for the re4st of the numbers because the suffix will be 'th' for them. 
+4th
+5th
+6th
+7th
+8th
+9th
+10th
+11th
+12th
+13th
+14th
+15th
+16th
+17th
+18th
+19th
+20th
+24th
+25th
+26th
+27th
+28th
+29th
+30th
+
+
+
 create a function that converts the Date() returned dayOfWeek into the full word
 function fullDay(day){
   if (day = )
@@ -16,6 +56,26 @@ function fullDay(day){
   when called pass in dayOfWeek =
   fullDay(dayOfWeek);
 /*
+  dayOfWeek = dateArray[0];
+
+  function fullDayOfWeek(day){
+    if (day == 'Mon') {
+      dayOfWeek = 'Monday';
+    } else if (day == 'Tue') {
+      dayOfWeek = 'Tuesday';
+    } else if (day == 'Wed') {
+      dayOfWeek = 'Wednesday';
+    } else if (day == 'Thu') {
+      dayOfWeek = 'Thursday';
+    } else if (day == 'Fri') {
+      dayOfWeek = 'Friday';
+    } else if (day == 'Sat') {
+      dayOfWeek = 'Saturday';
+    } else if (day == 'Sun') {
+      dayOfWeek = 'Sunday';
+    }
+  }
+  fullDayOfWeek(dayOfWeek);
 
 create a small database of userSubmissions and do a loop to display the content on the page dynamically
   = replace the hard coding of the lorem ipsum'd comments 
