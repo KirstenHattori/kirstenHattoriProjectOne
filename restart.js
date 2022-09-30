@@ -6,16 +6,26 @@
   // target the form
 const commentForm = document.getElementById('commentForm');
 const userSubmission = {};
+userSubmission.name = document.getElementById('name').value;
+userSubmission.comment = document.getElementById('comment').value;
+
+
   // add an eventlistener to the form
 commentForm.addEventListener('submit', function(event){
   preventDefault(event);
+
 });
-    //on submit, update the userSubmission object
+  //on submit, 
     // prevent default form submit behaviour
 function preventDefault(event) {
-  // prevent the default behaviour of a form submmission
   event.preventDefault();
+  updateUserSubmission();
+}
+
+    // update the userSubmission object
+function updateUserSubmission(){
   console.log('hi');
+  console.log(userSubmission.comment);
 }
 
 // a new li.comment is created inside of ul.commentsList
