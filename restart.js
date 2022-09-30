@@ -13,6 +13,7 @@ commentForm.addEventListener('submit', function(event){
   preventDefault(event);
   updateUserSubmission();
   formDate();
+  // createComment(userSubmission.date, userSubmission.name, userSubmission.comment);
 });
     // prevent default form submit behaviour
 function preventDefault(event) {
@@ -102,40 +103,46 @@ function formDate() {
     }
   }
   dayOfMonthSuffixed(dayOfMonth);
-  console.log(dayOfMonth);
 
   year = dateArray[3];
+
+
   userSubmission.date = `${dayOfWeek} ${month} ${dayOfMonth}, ${year}`
 }
 
 
 
+// target the ul.commentsList 
+const ulElement = document.querySelector('.commentsList');
+console.log(ulElement);
 
-// a new li.comment is created inside of ul.commentsList - happens on submit so create a function to do this that is called on submit
-//   the values come from userSubmission{}
-//     userSubmission.name
-//     userSubmission.comment
-//     userSubmission.date
+// create an li.comment
+  // create an li element
+const liElement = document.createElement('li');
+  // update the className
+listItem.className = 'comment'
 
-// target the ul.commentsList where the new user data will be appended to as li's
-const commentsList = document.getElementsByClassName('commentsList');
+// create a div.commentTxtContainer
+  // create an li element
+  // update the className
 
-// create a new li.comment to append to commentsList
-const commentItem = document.createElement('li');
-// accessing the className and modifying it
-commentItem.className = 'comment';
 
-// update the innerHtml commentItem
-// commentItem.innerHTML = `<div class="commentTxtContainer">
-//     <h4 class="accent"> ${userSubmission.date} by ${userSubmission.name} </h4>
-//     <p>${userSubmission.comment}</p>
-//   </div>
-// `; //the syntax is being complied weirdly and the html can't be read
-// going to create each level of html elements individually and then update their className and textContent
+// create a h4.accent 
 
-const commentTxtDiv = document.createElement('div');
-commentTxtDiv.className = 'commentTxtContainer';
 
-commentTxtDiv.innerHtml = `<h4>userSubmission.date</h4>`
+// create a p 
+
+
+// insert p into div.commentTxtContainer
+
+
+// insert h4.accent into div.commentTxtContainer
+
+
+// insert div.commentTxtContainer into li.comment
+
+
+// insert liElement(li.comment) into ulElement(ul.commentsList)
+ulElement.appendChild(liElement);
 
 
