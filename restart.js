@@ -123,15 +123,18 @@ const liElement = document.createElement('li');
 listItem.className = 'comment'
 
 // create a div.commentTxtContainer
-  // create an li element
+  // create a div element
   // update the className
 
 
 // create a h4.accent 
-
+  // create an h4 element
+  // update the className
+  // update the textContent with 'userSubmissions.date by userSubmission.name'
 
 // create a p 
-
+  // create a p element
+  // update the textContent with userSubmissions.comment
 
 // insert p into div.commentTxtContainer
 
