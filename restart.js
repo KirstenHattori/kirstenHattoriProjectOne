@@ -13,9 +13,10 @@ commentForm.addEventListener('submit', function(event){
   preventDefault(event);
   updateUserSubmission();
   formDate();
-  createComment(userSubmission.date, userSubmission.name, userSubmission.comment);
-
+  createComment(userSubmission.date, userSubmission.name.value, userSubmission.comment.value);
+  formReset(); 
 });
+
     // prevent default form submit behaviour
 function preventDefault(event) {
   event.preventDefault();
@@ -23,8 +24,8 @@ function preventDefault(event) {
 
     // update the userSubmission object
 function updateUserSubmission(){
-  userSubmission.name = document.getElementById('name').value;
-  userSubmission.comment = document.getElementById('comment').value;
+  userSubmission.name = document.getElementById('name');
+  userSubmission.comment = document.getElementById('comment');
 }
 
 // function for capturing submission date when user submits form
@@ -116,7 +117,6 @@ function createComment(inputDate, inputName, inputComment) {
   
 // target the ul.commentsList 
 const ulElement = document.querySelector('.commentsList');
-console.log(ulElement);
 
 // create an li.comment
   // create an li element
@@ -158,3 +158,30 @@ ulElement.appendChild(liElement);
 }
 
 
+// function to refresh the form after successful submission
+function formReset(){
+// // // try resetting the input.value to an empty string //didn't reset the placeholder
+//   userSubmission.name = '';
+//   userSubmission.comment = '';
+
+// // // target the value of the placeholder of each input and textarea and reset either the value in the DOM object or the textContent of the placeholder attribute //didn't work either
+//     // //   // creating an object to keep the form field together
+//     // const formPlaceholders = {}
+//     // // target the placeholder attribute of the name input
+//     // formPlaceholders.name = document.getElementById('name').value
+//     // // target the placeholder attribute of the email input
+//     // formPlaceholders.email = document.getElementById('email')
+//     // // target the placeholder attribute of the textarea
+//     // formPlaceholders.comment = document.getElementById('comment')
+//     // formPlaceholders.name.value = "Name"
+//     // console.log(formPlaceholders);
+//   // // ^= to keep it dryer, just reuse the targetting of the nec elements from the userSubmission object and add one for the email. //that didn't work either - probably because it changes their values in the comment that is posted. 
+  userSubmission.email = document.getElementById('email');
+//   userSubmission.name = "";
+//   userSubmission.email = "";
+//   userSubmission.comment = "";
+userSubmission.name.value = '';
+userSubmission.email.value = '';
+userSubmission.comment.value = '';
+//moved the .value around, so it is no longer the variable value of the userSubmission properties, it's captured in the different functions so it is indiependently changable = it can be changed in each function which is the nec behaviour. 
+}
