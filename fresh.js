@@ -2,13 +2,20 @@
 /*
 blog = the comments ul and the userSubmission form
 
+stretch goal: 
+create function to add the correct suffix to the dayOfMonth number to be grammatically correct
+if ends in 0, 4,5,6,7,8,9 add 'th';
+else if ends in 1, add 'st';
+else if ends in 2, add 'nd';
+else if ends in 3, add 'rd';
+
 
 /* 
 ~ HTML outline
   ul.commentsList
     li.comment
       div.commentTextContainer
-        h4.accent> ${userSubmission.name}
+        h4.accent> ${date: dayOfWeek month dayOfMonth `,` year}${userSubmission.name} 
         p> ${userSubmission.comment}
 
   form.commentForm
@@ -19,8 +26,6 @@ blog = the comments ul and the userSubmission form
 user inputs ${name} & ${comment} & Date() is called on submission, the value of which is saved as ${date}
 
 capture user's submission in an object
-
-
 form values are saved in the userSubmission object
   event listener
   event handler = what happens when the submit event happens
@@ -45,6 +50,7 @@ the form resets on successful submit
 
 
 
+// ~~~what i orginially started with
 // // creating namespace
 // const blog = {};
 
@@ -124,23 +130,23 @@ commentsList.append(createComment());
 //=== defining the variables outside of the date() method and as properties of the blog {} ???
 // should this be declared inside the date method?
 const date = Date();
-blog.date = function (date) {
+formDate = function (date) {
   // call Date() to get the datestamp of user submission
   // Date();
   // on submit, date() is called and the return is saved as dateString
 
-  blog.dateString = Date();
+  dateString = Date();
   // turn the string into an array so can access individual values and use them to populate the page ( ${}-style )
-  blog.dateArray = [];
-  blog.dateArray = blog.dateString.split(' ');
+  dateArray = [];
+  dateArray = dateString.split(' ');
 
   // need to convert the three letters for dayofweek and month to full words to be displayed on page. = updating the value of dayOfWeek and month
   // conditional of an if (dayOfWeek = Sun) {dayOfWeek = Sunday} else if (dayOfWeek = Mon){dayOfWeek = Monday} etc
   // extract that out to a fucntion that accepts dayOfWeek as an argument
-  blog.dayOfWeek = blog.dateArray[0];
-  blog.month = blog.dateArray[1];
-  blog.dayOfMonth = blog.dateArray[2];
-  blog.year = blog.dateArray[3];
+  dayOfWeek = dateArray[0];
+  month = dateArray[1];
+  dayOfMonth = dateArray[2];
+  year = dateArray[3];
 }
 
 
@@ -156,5 +162,30 @@ blog.date = function (date) {
 form.addEventListener('submit', function (event) {
   preventDefault(event);
   createComment();
-  date;
+  date();
 });
+
+
+
+// //going over with Tiffany in project work time
+// // listen for certain user inputs from the form
+
+//   // text
+//   // textarea
+//   //form submission date
+
+// //save as ^ variables, and the form
+// const form = document.querySelector('form');
+// const userName = document.querySelector('input[type=text]').value;
+// const userComment = document.querySelector('textarea');
+// const submitDate = Date();
+// console.log(form, userName, userComment, submitDate);
+// //will be getting the value from the inputs
+// // from values, be able to change the innerHtml
+
+// form.addEventListener('submit', function (event) {
+//   event.preventDefault();
+//   console.log(event.target);
+// });
+
+// // create html elements
