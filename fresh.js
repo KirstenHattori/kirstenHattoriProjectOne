@@ -9,7 +9,12 @@ else if ends in 1, add 'st';
 else if ends in 2, add 'nd';
 else if ends in 3, add 'rd';
 
-
+create a function that converts the Date() returned dayOfWeek into the full word
+function fullDay(day){
+  if (day = )
+}
+  when called pass in dayOfWeek =
+  fullDay(dayOfWeek);
 /* 
 ~ HTML outline
   ul.commentsList
@@ -129,8 +134,8 @@ commentsList.append(createComment());
 
 //=== defining the variables outside of the date() method and as properties of the blog {} ???
 // should this be declared inside the date method?
-const date = Date();
-formDate = function (date) {
+// const date = Date();
+formDate = function () {
   // call Date() to get the datestamp of user submission
   // Date();
   // on submit, date() is called and the return is saved as dateString
