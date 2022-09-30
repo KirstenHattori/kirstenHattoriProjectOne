@@ -15,6 +15,12 @@ function fullDay(day){
 }
   when called pass in dayOfWeek =
   fullDay(dayOfWeek);
+/*
+
+create a small database of userSubmissions and do a loop to display the content on the page dynamically
+  = replace the hard coding of the lorem ipsum'd comments 
+
+
 /* 
 ~ HTML outline
   ul.commentsList

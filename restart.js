@@ -64,13 +64,16 @@ const commentItem = document.createElement('li');
 commentItem.className = 'comment';
 
 // update the innerHtml commentItem
-commentItem.innerHTML = `<div class="commentTxtContainer">
-    <h4 class="accent"> ${userSubmission.date} by ${userSubmission.name} </h4>
-    <p>${userSubmission.comment}</p>
-  </div>
-`; //the syntax is being complied weirdly and the html can't be read
+// commentItem.innerHTML = `<div class="commentTxtContainer">
+//     <h4 class="accent"> ${userSubmission.date} by ${userSubmission.name} </h4>
+//     <p>${userSubmission.comment}</p>
+//   </div>
+// `; //the syntax is being complied weirdly and the html can't be read
+// going to create each level of html elements individually and then update their className and textContent
+
+const commentTxtDiv = document.createElement('div');
+commentTxtDiv.className = 'commentTxtContainer';
+
+commentTxtDiv.innerHtml = `<h4>userSubmission.date</h4>`
 
 
-
-console.log(commentItem);
-// commentsList.appendChild(commentItem);
