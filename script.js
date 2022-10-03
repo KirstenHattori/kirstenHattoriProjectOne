@@ -16,9 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // BLOG FORM
 // user fills out a form and submits it
-//   the inputs are targeted andn the form is listened to so the input.values can be saved as variables to use ^
+//   the inputs are targeted and the form is listened to so the input.values can be saved as variables to use ^
+
 // target the form
 const commentForm = document.getElementById('commentForm');
+// create object to store users responses to the form
 const userSubmission = {};
 
 //on submit, 
