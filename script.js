@@ -13,39 +13,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 })
 
+// ~~~stretch goals
+  // add init function
+  // add namespacing
+    // have to change syntaxes from declaring to expressing a function to define it
+const assignment2 = {}
 
 // BLOG FORM
 // user fills out a form and submits it
 //   the inputs are targeted and the form is listened to so the input.values can be saved as variables to use ^
 
 // target the form
-const commentForm = document.getElementById('commentForm');
+assignment2.commentForm = document.getElementById('commentForm');
 // create object to store users responses to the form
-const userSubmission = {};
+assignment2.userSubmission = {};
 
 //on submit, 
 // add an eventlistener to the form
-commentForm.addEventListener('submit', function (event) {
-  preventDefault(event);
-  updateUserSubmission();
-  formDate();
-  createComment(userSubmission.date, userSubmission.name.value, userSubmission.comment.value);
-  formReset();
+assignment2.commentForm.addEventListener('submit', function(event) {
+  assignment2.preventDefault(event);
+  assignment2.updateUserSubmission();
+  assignment2.formDate();
+  assignment2.createComment(assignment2.userSubmission.date, assignment2.userSubmission.name.value, assignment2.userSubmission.comment.value);
+  assignment2.formReset();
 });
 
 // prevent default form submit behaviour
-function preventDefault(event) {
+assignment2.preventDefault = function(event) {
   event.preventDefault();
 }
 
+
 // update the userSubmission object
-function updateUserSubmission() {
-  userSubmission.name = document.getElementById('name');
-  userSubmission.comment = document.getElementById('comment');
+assignment2.updateUserSubmission = function() {
+  assignment2.userSubmission.name = document.getElementById('name');
+  assignment2.userSubmission.comment = document.getElementById('comment');
 }
 
 // function for capturing submission date when user submits form
-function formDate() {
+assignment2.formDate = function() {
   // call Date() to get the datestamp of user submission
   // Date();
   // on submit, date() is called and the return is saved as dateString
@@ -125,11 +131,11 @@ function formDate() {
   year = dateArray[3];
 
 
-  userSubmission.date = `${dayOfWeek} ${month} ${dayOfMonth}, ${year}`
+  assignment2.userSubmission.date = `${dayOfWeek} ${month} ${dayOfMonth}, ${year}`
 }
 
 // function for displaying userSubmission data on page
-function createComment(inputDate, inputName, inputComment) {
+assignment2.createComment = function(inputDate, inputName, inputComment) {
 
   // target the ul.commentsList 
   const ulElement = document.querySelector('.commentsList');
@@ -174,7 +180,7 @@ function createComment(inputDate, inputName, inputComment) {
 }
 
 // function to refresh the form after successful submission
-function formReset() {
+assignment2.formReset = function() {
   // // // try resetting the input.value to an empty string //didn't reset the placeholder
   //   userSubmission.name = '';
   //   userSubmission.comment = '';
@@ -203,5 +209,5 @@ function formReset() {
   //moved the .value around, so it is no longer the variable value of the userSubmission properties, it's captured in the different functions so it is indiependently changable = it can be changed in each function which is the nec behaviour. 
 
   // the built in way, suggestion from Tiffany
-  commentForm.reset();
+  assignment2.commentForm.reset();
 }
