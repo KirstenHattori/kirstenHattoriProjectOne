@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ~~~stretch goals
   // add init function
+
+
   // add namespacing
     // have to change syntaxes from declaring to expressing a function to define it
 const assignment2 = {}
@@ -27,16 +29,19 @@ const assignment2 = {}
 assignment2.commentForm = document.getElementById('commentForm');
 // create object to store users responses to the form
 assignment2.userSubmission = {};
+// create init function where all the other functions will be called and event listeners will be attached
+assignment2.init = function(){
+  //on submit, 
+  // add an eventlistener to the form
+  assignment2.commentForm.addEventListener('submit', function(event) {
+    assignment2.preventDefault(event);
+    assignment2.updateUserSubmission();
+    assignment2.formDate();
+    assignment2.createComment(assignment2.userSubmission.date, assignment2.userSubmission.name.value, assignment2.userSubmission.comment.value);
+    assignment2.formReset();
+  });
+}
 
-//on submit, 
-// add an eventlistener to the form
-assignment2.commentForm.addEventListener('submit', function(event) {
-  assignment2.preventDefault(event);
-  assignment2.updateUserSubmission();
-  assignment2.formDate();
-  assignment2.createComment(assignment2.userSubmission.date, assignment2.userSubmission.name.value, assignment2.userSubmission.comment.value);
-  assignment2.formReset();
-});
 
 // prevent default form submit behaviour
 assignment2.preventDefault = function(event) {
@@ -211,3 +216,5 @@ assignment2.formReset = function() {
   // the built in way, suggestion from Tiffany
   assignment2.commentForm.reset();
 }
+
+assignment2.init();
